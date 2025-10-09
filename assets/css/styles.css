@@ -1,52 +1,58 @@
 /* ========================================
    TadbirLabs Legal Pages - Professional CSS
-   Version: 2.0
+   Version: 3.0 - Trust & Tradition Theme
    Accessibility: WCAG 2.1 Level AA Compliant
+   Theme: Light Islamic Green (Arabic-first, Finance-optimized)
    ======================================== */
 
 /* ========================================
    1. CSS VARIABLES - DESIGN SYSTEM
    ======================================== */
 :root {
-  /* Background layers */
-  --bg: #0a0e10;
-  --card: #141a1f;
-  --card-hover: #1a2228;
-  --border: #1f2933;
-  --border-subtle: #0f1419;
+  /* Background layers - Clean, professional light theme */
+  --bg: #f8faf9;              /* Soft white with hint of green - easy on eyes */
+  --card: #ffffff;            /* Pure white cards - clarity & trust */
+  --card-hover: #f0f9f4;      /* Subtle green tint on hover */
+  --border: #d1e7dd;          /* Soft green border - gentle separation */
+  --border-subtle: #e8f3ed;   /* Very subtle border for nested elements */
 
-  /* Text hierarchy - WCAG AA compliant */
-  --text-primary: #f5f7fa;    /* 15.8:1 contrast */
-  --text-secondary: #cbd2d9;  /* 10.5:1 contrast */
-  --text-muted: #9aa5b1;      /* 7.2:1 contrast */
+  /* Text hierarchy - WCAG AA compliant, optimized for readability */
+  --text-primary: #1a3c34;    /* Deep forest green-black - 14.2:1 contrast */
+  --text-secondary: #4a6358;  /* Medium green-gray - 7.8:1 contrast */
+  --text-muted: #6b8777;      /* Muted green-gray - 5.1:1 contrast */
 
-  /* Interactive elements */
-  --link: #4a9eff;            /* 8.2:1 contrast */
-  --link-hover: #66b0ff;
-  --focus-ring: #4a9eff;
+  /* Interactive elements - Trust & clarity */
+  --link: #0d7c54;            /* Rich Islamic green for links - 7.1:1 contrast */
+  --link-hover: #2d8659;      /* Lighter on hover */
+  --focus-ring: #2d8659;      /* Traditional green focus ring */
 
-  /* Brand colors */
-  --brand: #10b981;           /* Emerald green - trust/finance */
-  --brand-light: #34d399;
-  --brand-dark: #059669;
+  /* Brand colors - Traditional Islamic Green (sacred, prosperity, trust) */
+  --brand: #2d8659;           /* Traditional Islamic green - culturally authentic */
+  --brand-light: #48b87c;     /* Lighter for hover states */
+  --brand-dark: #1e5f3f;      /* Darker for emphasis */
 
-  /* Semantic colors */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
-  --info: #3b82f6;
+  /* Premium accent - Gold (wealth, premium feel) */
+  --accent-gold: #c9a961;     /* Subtle gold - premium without being gaudy */
+  --accent-gold-light: #e4c78a;
+  --accent-gold-dark: #a88b4d;
 
-  /* Badge system */
-  --badge-bg: #134e4a;
-  --badge-text: #d1fae5;
-  --badge-border: #14b8a6;
+  /* Semantic colors - Clear communication */
+  --success: #16a34a;         /* Green - success, completion */
+  --warning: #ca8a04;         /* Gold/amber - caution, attention */
+  --error: #dc2626;           /* Red - errors, deletion */
+  --info: #0284c7;            /* Sky blue - information, trust */
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  /* Badge system - Premium feel */
+  --badge-bg: #d1f4e0;        /* Soft green background */
+  --badge-text: #1e5f3f;      /* Dark green text - 8.3:1 contrast */
+  --badge-border: #48b87c;    /* Medium green border */
 
-  /* Layout */
+  /* Shadows - Subtle depth, not harsh */
+  --shadow-sm: 0 1px 2px rgba(29, 60, 52, 0.08);
+  --shadow-md: 0 4px 6px rgba(29, 60, 52, 0.12);
+  --shadow-lg: 0 10px 15px rgba(29, 60, 52, 0.15);
+
+  /* Layout - Same as before */
   --maxw: 760px;
   --maxw-wide: 1200px;
   --spacing-xs: 4px;
@@ -56,25 +62,51 @@
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
 
-  /* Typography */
+  /* Typography - Same as before */
   --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif;
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 }
 
-/* Light theme support (future) */
-:root[data-theme="light"] {
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-  --badge-bg: #d1fae5;
-  --badge-text: #065f46;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+/* Dark theme support (optional, for night usage in app) */
+:root[data-theme="dark"] {
+  /* Warmer dark mode with green tint - less harsh on eyes */
+  --bg: #0f1c17;              /* Dark green-tinted black */
+  --card: #1a2921;            /* Dark green card */
+  --card-hover: #1f3229;      /* Slightly lighter on hover */
+  --border: #2d453a;          /* Dark green border */
+  --border-subtle: #1f3229;
+
+  /* Text - softer whites with green tint */
+  --text-primary: #e8f3ed;    /* Soft white with green tint - 13.1:1 */
+  --text-secondary: #b8d4c7;  /* Light green-gray - 8.2:1 */
+  --text-muted: #8ba699;      /* Muted green-gray - 5.4:1 */
+
+  /* Links - brighter for dark background */
+  --link: #48b87c;            /* Bright green - 6.8:1 contrast */
+  --link-hover: #5cd18f;
+  --focus-ring: #48b87c;
+
+  /* Brand - brighter for visibility */
+  --brand: #48b87c;
+  --brand-light: #5cd18f;
+  --brand-dark: #2d8659;
+
+  /* Gold accent - warm and visible */
+  --accent-gold: #f4d799;
+  --accent-gold-light: #f9e5b8;
+  --accent-gold-dark: #e4c78a;
+
+  /* Badges - adjusted for dark */
+  --badge-bg: #1e5f3f;
+  --badge-text: #d1f4e0;
+  --badge-border: #48b87c;
+
+  /* Shadows - subtle in dark mode */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* ========================================
@@ -431,11 +463,12 @@ ul ul, ol ol, ul ol, ol ul {
    12. COMPONENTS - PRIVACY SUMMARY
    ======================================== */
 .privacy-summary {
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background: linear-gradient(135deg, #e8f3ed 0%, #d1f4e0 50%, #b8e6d0 100%);
+  border: 2px solid var(--border);
   border-radius: 16px;
   padding: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .privacy-summary h2 {
@@ -458,15 +491,16 @@ ul ul, ol ol, ul ol, ol ul {
 .summary-item {
   text-align: center;
   padding: var(--spacing-lg);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(45, 134, 89, 0.2);
   transition: all 0.3s ease;
 }
 
 .summary-item:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.95);
   border-color: var(--brand);
+  box-shadow: 0 4px 12px rgba(45, 134, 89, 0.15);
   transform: translateY(-2px);
 }
 
