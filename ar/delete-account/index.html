@@ -1,22 +1,321 @@
-﻿<!doctype html><html lang="ar" dir="rtl"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>حذف الحساب – TadbirLabs</title>
-<meta name="description" content="Tadbir – Arabic-first, offline-first expense tracker by TadbirLabs.">
+<!doctype html><html lang="ar" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حذف الحساب والبيانات – TadbirLabs</title>
+<meta name="description" content="كيفية حذف حسابك وبياناتك في تدبير. دليل كامل لحذف البيانات المحلية وإزالة النسخ الاحتياطية السحابية.">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<meta property="og:title" content="حذف الحساب – TadbirLabs">
-<meta property="og:description" content="Tadbir – Arabic-first, offline-first expense tracker by TadbirLabs.">
+<meta property="og:title" content="حذف الحساب والبيانات – TadbirLabs">
+<meta property="og:description" content="كيفية حذف حسابك وبياناتك في تدبير. دليل كامل لحذف البيانات المحلية وإزالة النسخ الاحتياطية السحابية.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tadbirlabs.github.io/ar/delete-account/">
 <link rel="canonical" href="https://tadbirlabs.github.io/ar/delete-account/">
+<link rel="alternate" hreflang="ar" href="https://tadbirlabs.github.io/ar/delete-account/">
+<link rel="alternate" hreflang="en" href="https://tadbirlabs.github.io/delete-account/">
 </head><body>
+
 <main><div class="article">
 <nav class='breadcrumbs'><a href='/ar/'>الرئيسية</a> / حذف الحساب</nav>
-<h1>حذف الحساب</h1>
+
+<h1>حذف الحساب والبيانات</h1>
 <p class='meta'><strong>آخر تحديث:</strong> 9 أكتوبر 2025</p>
-<p>يعمل تدبير دون اتصال ولا ينشئ حسابات خادم افتراضياً. إذا قدّمنا لاحقاً حسابات سحابية اختيارية فستوضح هذه الصفحة خطوات حذف الحساب والبيانات لدى المزوّد المعني.</p>
-<p>إذا كنت تستخدم البيانات المحلية فقط، يمكنك حذف بياناتك من داخل التطبيق أو عبر إزالة تثبيت التطبيق.</p>
-<p>للتواصل: <a href='mailto:tadbirlabs@gmail.com'>tadbirlabs@gmail.com</a></p>
-<div class="footer">© <span class="year"></span> TadbirLabs • <a href="mailto:tadbirlabs@gmail.com">tadbirlabs@gmail.com</a></div>
+
+<div class="lang-switch">
+  <strong>اللغات:</strong>
+  <a href="/delete-account/">English</a>
+  <a href="/ar/delete-account/">العربية</a>
+</div>
+
+<div class="important-notice">
+  <p><strong>تطبيق أولاً دون اتصال:</strong> يخزن تدبير بياناتك محلياً على جهازك بشكل افتراضي. لا يتم إنشاء حساب على الخادم ما لم تقم بتمكين الميزات السحابية الاختيارية بشكل صريح.</p>
+</div>
+
+<!-- نظرة عامة سريعة -->
+<div class="privacy-summary">
+  <h2>حذف البيانات في لمحة</h2>
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span class="icon">📱</span>
+      <h3>البيانات المحلية</h3>
+      <p>احذف فوراً من خلال إعدادات التطبيق أو إلغاء التثبيت</p>
+    </div>
+    <div class="summary-item">
+      <span class="icon">☁️</span>
+      <h3>النسخ الاحتياطية السحابية</h3>
+      <p>احذف من خلال إعدادات Google Drive أو iCloud</p>
+    </div>
+    <div class="summary-item">
+      <span class="icon">⏱️</span>
+      <h3>الجدول الزمني</h3>
+      <p>حذف محلي فوري، 30 يوماً للسحابة</p>
+    </div>
+    <div class="summary-item">
+      <span class="icon">✅</span>
+      <h3>التأكيد</h3>
+      <p>لا تبقى بيانات شخصية بعد الحذف</p>
+    </div>
+  </div>
+</div>
+
+<h2>فهم تخزين البيانات في تدبير</h2>
+<p>تم تصميم تدبير مع مراعاة الخصوصية. نعمل على نموذج <strong>أولاً دون اتصال</strong>، مما يعني:</p>
+<ul>
+  <li><strong>لا حساب إلزامي:</strong> يمكنك استخدام تدبير بدون إنشاء أي حساب عبر الإنترنت</li>
+  <li><strong>تخزين محلي:</strong> يتم تخزين بياناتك المالية على جهازك فقط</li>
+  <li><strong>لا بيانات على الخادم:</strong> نحن لا نحتفظ بقواعد بيانات تحتوي على معلوماتك الشخصية</li>
+  <li><strong>ميزات سحابية اختيارية:</strong> النسخ الاحتياطي السحابي اختياري تماماً ويتطلب موافقتك الصريحة</li>
+</ul>
+
+<h2>كيفية حذف بياناتك</h2>
+
+<h3>الخيار 1: حذف البيانات المحلية (الأكثر شيوعاً)</h3>
+<p>إذا كنت تستخدم تدبير في وضع عدم الاتصال (الوضع الافتراضي)، يتم تخزين جميع بياناتك محلياً على جهازك. لحذفها:</p>
+
+<h4>الطريقة أ: مسح البيانات من داخل التطبيق</h4>
+<ol>
+  <li>افتح تطبيق تدبير</li>
+  <li>انتقل إلى <strong>الإعدادات</strong> (أيقونة ⚙️)</li>
+  <li>مرر إلى قسم <strong>إدارة البيانات</strong></li>
+  <li>اضغط على <strong>مسح جميع البيانات</strong></li>
+  <li>أكد بالضغط على <strong>حذف كل شيء</strong></li>
+  <li>سيتم حذف جميع المعاملات والفئات والميزانيات والإعدادات نهائياً</li>
+</ol>
+<p class="warning-notice"><strong>تحذير:</strong> هذا الإجراء غير قابل للتراجع. تأكد من تصدير بياناتك أولاً إذا كنت ترغب في الاحتفاظ بنسخة احتياطية (الإعدادات ← تصدير البيانات).</p>
+
+<h4>الطريقة ب: إلغاء تثبيت التطبيق</h4>
+<p>سيؤدي إلغاء تثبيت تطبيق تدبير إلى حذف جميع البيانات المحلية تلقائياً:</p>
+
+<p><strong>على iOS:</strong></p>
+<ol>
+  <li>اضغط مطولاً على أيقونة تطبيق تدبير على شاشتك الرئيسية</li>
+  <li>اضغط على <strong>إزالة التطبيق</strong></li>
+  <li>اختر <strong>حذف التطبيق</strong></li>
+  <li>أكد الحذف</li>
+  <li>يتم إزالة جميع البيانات المحلية فوراً وبشكل نهائي</li>
+</ol>
+
+<p><strong>على Android:</strong></p>
+<ol>
+  <li>انتقل إلى <strong>الإعدادات</strong> ← <strong>التطبيقات</strong></li>
+  <li>ابحث عن <strong>تدبير</strong> واضغط عليه</li>
+  <li>اضغط على <strong>إلغاء التثبيت</strong></li>
+  <li>أكد إلغاء التثبيت</li>
+  <li>يتم إزالة جميع البيانات المحلية فوراً وبشكل نهائي</li>
+</ol>
+
+<h3>الخيار 2: حذف النسخ الاحتياطية السحابية (إذا تم تمكينها)</h3>
+<p>إذا قمت سابقاً بتمكين ميزات النسخ الاحتياطي السحابي، يتم تخزين نسخك الاحتياطية المشفرة في حساب التخزين السحابي الشخصي الخاص بك. لحذفها:</p>
+
+<h4>Google Drive (مستخدمي Android)</h4>
+<ol>
+  <li>افتح تطبيق <strong>Google Drive</strong> أو قم بزيارة <a href="https://drive.google.com" target="_blank" rel="noopener">drive.google.com</a></li>
+  <li>انتقل إلى <strong>النسخ الاحتياطية</strong> أو استخدم شريط البحث للبحث عن "Tadbir"</li>
+  <li>حدد موقع ملفات النسخ الاحتياطي المسماة <code>tadbir_backup_YYYYMMDD.enc</code></li>
+  <li>حدد جميع ملفات النسخ الاحتياطي لتدبير</li>
+  <li>اضغط على أيقونة <strong>الحذف</strong> (🗑️)</li>
+  <li>أكد الحذف</li>
+  <li>انتقل إلى <strong>المهملات</strong> واحذف الملفات نهائياً (اختياري ولكن موصى به للإزالة الفورية)</li>
+</ol>
+<p><strong>الجدول الزمني للحذف:</strong> يتم حذف الملفات نهائياً من سلة المهملات في Google Drive بعد 30 يوماً، أو فوراً إذا قمت بإفراغ سلة المهملات يدوياً.</p>
+
+<h4>iCloud (مستخدمي iOS)</h4>
+<ol>
+  <li>على جهاز iPhone/iPad الخاص بك، انتقل إلى <strong>الإعدادات</strong> ← <strong>[اسمك]</strong></li>
+  <li>اضغط على <strong>iCloud</strong> ← <strong>إدارة مساحة التخزين</strong></li>
+  <li>ابحث عن <strong>تدبير</strong> واضغط عليه في قائمة التطبيقات</li>
+  <li>اضغط على <strong>حذف البيانات</strong> أو <strong>تعطيل وحذف</strong></li>
+  <li>أكد الحذف</li>
+  <li>تتم إزالة جميع بيانات النسخ الاحتياطي من iCloud نهائياً</li>
+</ol>
+<p><strong>الجدول الزمني للحذف:</strong> يتم حذف النسخ الاحتياطية في iCloud فوراً ولا يمكن استردادها بعد التأكيد.</p>
+
+<h3>الخيار 3: طلب حذف الحساب (ميزة مستقبلية)</h3>
+<p>حالياً، لا ينشئ تدبير حسابات على الخادم. إذا قدمنا حسابات سحابية اختيارية في المستقبل، سيوفر هذا القسم تعليمات تفصيلية لطلب حذف الحساب.</p>
+
+<p><strong>إذا/عندما تتوفر حسابات سحابية، ستتمكن من:</strong></p>
+<ul>
+  <li>تقديم طلب حذف عبر إعدادات التطبيق</li>
+  <li>مراسلتنا عبر البريد الإلكتروني على <a href="mailto:privacy@tadbirlabs.com">privacy@tadbirlabs.com</a> مع عنوان "طلب حذف الحساب"</li>
+  <li>تلقي تأكيد خلال 48 ساعة</li>
+  <li>حذف جميع بيانات الحساب نهائياً خلال 30 يوماً (متوافق مع GDPR/CCPA)</li>
+</ul>
+
+<h2>ما الذي يتم حذفه</h2>
+
+<h3>يشمل حذف البيانات المحلية:</h3>
+<ul>
+  <li>جميع المعاملات المالية والإيصالات</li>
+  <li>الحسابات والأرصدة</li>
+  <li>الفئات والميزانيات</li>
+  <li>الإعدادات والتفضيلات المخصصة</li>
+  <li>سجل استخدام التطبيق (المخزن محلياً فقط)</li>
+  <li>أي صور/مرفقات مرتبطة بالمعاملات</li>
+</ul>
+
+<h3>يشمل حذف النسخ الاحتياطية السحابية:</h3>
+<ul>
+  <li>ملفات النسخ الاحتياطي المشفرة المخزنة في Google Drive أو iCloud</li>
+  <li>جميع إصدارات النسخ الاحتياطي التاريخية</li>
+  <li>بيانات المزامنة الوصفية (إن وجدت)</li>
+</ul>
+
+<h3>ما لا يتعين علينا حذفه (لأننا لا نجمعه أبداً):</h3>
+<ul>
+  <li>❌ سجل التصفح أو التحليلات السلوكية</li>
+  <li>❌ بيانات التتبع من جهات خارجية</li>
+  <li>❌ اتصالات وسائل التواصل الاجتماعي</li>
+  <li>❌ سجل الموقع</li>
+  <li>❌ ملفات تعريف الإعلانات</li>
+</ul>
+
+<h2>الجدول الزمني للحذف</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 24px 0;">
+  <thead>
+    <tr style="background: var(--card); border-bottom: 2px solid var(--brand);">
+      <th style="padding: 12px; text-align: right; color: var(--text-primary);">نوع البيانات</th>
+      <th style="padding: 12px; text-align: right; color: var(--text-primary);">طريقة الحذف</th>
+      <th style="padding: 12px; text-align: right; color: var(--text-primary);">الجدول الزمني</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 12px; color: var(--text-secondary);">بيانات التطبيق المحلية</td>
+      <td style="padding: 12px; color: var(--text-secondary);">إعدادات التطبيق أو إلغاء التثبيت</td>
+      <td style="padding: 12px; color: var(--brand); font-weight: 600;">فوري</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 12px; color: var(--text-secondary);">نسخ Google Drive الاحتياطية</td>
+      <td style="padding: 12px; color: var(--text-secondary);">حذف يدوي في Drive</td>
+      <td style="padding: 12px; color: var(--text-secondary);">30 يوماً (أو فوري إذا تم إفراغ المهملات)</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 12px; color: var(--text-secondary);">نسخ iCloud الاحتياطية</td>
+      <td style="padding: 12px; color: var(--text-secondary);">إعدادات iCloud</td>
+      <td style="padding: 12px; color: var(--brand); font-weight: 600;">فوري</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; color: var(--text-secondary);">حساب الخادم (مستقبلي)</td>
+      <td style="padding: 12px; color: var(--text-secondary);">طلب عبر البريد الإلكتروني</td>
+      <td style="padding: 12px; color: var(--text-secondary);">30 يوماً (GDPR/CCPA)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>قبل الحذف: تصدير بياناتك</h2>
+<p>إذا كنت ترغب في الاحتفاظ بنسخة من بياناتك المالية قبل الحذف، يتيح لك تدبير التصدير:</p>
+
+<h3>كيفية تصدير البيانات</h3>
+<ol>
+  <li>افتح تطبيق تدبير</li>
+  <li>انتقل إلى <strong>الإعدادات</strong> ← <strong>إدارة البيانات</strong></li>
+  <li>اضغط على <strong>تصدير البيانات</strong></li>
+  <li>اختر التنسيق:
+    <ul>
+      <li><strong>CSV:</strong> للاستخدام في Excel أو Google Sheets أو تطبيقات جداول البيانات الأخرى</li>
+      <li><strong>JSON:</strong> للمستخدمين التقنيين أو الاستيراد في تطبيقات المالية الأخرى</li>
+    </ul>
+  </li>
+  <li>حدد موقع التصدير (البريد الإلكتروني، تطبيق الملفات، التخزين السحابي)</li>
+  <li>اضغط على <strong>تصدير</strong> لحفظ بياناتك</li>
+</ol>
+
+<p class="important-notice"><strong>موصى به:</strong> قم بتصدير بياناتك قبل الحذف إذا كنت قد تحتاج إلى سجلات ضريبية أو تقارير مصروفات أو بيانات مالية تاريخية في المستقبل.</p>
+
+<h2>حقوقك بموجب قوانين الخصوصية</h2>
+
+<h3>GDPR (مستخدمي أوروبا)</h3>
+<p>بموجب اللائحة العامة لحماية البيانات، لديك الحق في:</p>
+<ul>
+  <li><strong>الحق في المحو ("الحق في النسيان"):</strong> طلب حذف جميع البيانات الشخصية</li>
+  <li><strong>الحق في قابلية نقل البيانات:</strong> تصدير بياناتك بتنسيق قابل للقراءة آلياً</li>
+  <li><strong>الحق في التصحيح:</strong> تصحيح البيانات غير الدقيقة (يتم داخل التطبيق)</li>
+</ul>
+
+<h3>CCPA/CPRA (مستخدمي كاليفورنيا)</h3>
+<p>بموجب قانون خصوصية المستهلك في كاليفورنيا، لديك الحق في:</p>
+<ul>
+  <li><strong>الحق في الحذف:</strong> طلب حذف المعلومات الشخصية التي جمعناها</li>
+  <li><strong>الحق في المعرفة:</strong> طلب الكشف عن البيانات التي لدينا (لا شيء على الخوادم حالياً)</li>
+  <li><strong>الحق في عدم التمييز:</strong> ممارسة الحقوق دون عقوبة</li>
+</ul>
+
+<h2>التحقق والتأكيد</h2>
+
+<h3>كيفية التحقق من الحذف</h3>
+<p><strong>البيانات المحلية:</strong></p>
+<ul>
+  <li>افتح التطبيق بعد الحذف – سترى شاشة الترحيب/التعريف</li>
+  <li>ستكون جميع البيانات السابقة قد اختفت</li>
+  <li>لا يمكن الاسترداد بعد الحذف المحلي</li>
+</ul>
+
+<p><strong>النسخ الاحتياطية السحابية:</strong></p>
+<ul>
+  <li>تحقق من مساحة تخزين Google Drive أو iCloud الخاصة بك – يجب ألا تظهر نسخ تدبير الاحتياطية بعد الآن</li>
+  <li>إذا كانت الملفات لا تزال في سلة المهملات، سيتم حذفها نهائياً بعد 30 يوماً (Google) أو فوراً (iCloud)</li>
+</ul>
+
+<h3>هل تحتاج إلى تأكيد؟</h3>
+<p>إذا كنت بحاجة إلى تأكيد خطي لحذف البيانات (للامتثال لـ GDPR/CCPA أو السجلات الشخصية)، راسلنا عبر البريد الإلكتروني على <a href="mailto:privacy@tadbirlabs.com">privacy@tadbirlabs.com</a> مع:</p>
+<ul>
+  <li>سطر الموضوع: "طلب تأكيد حذف البيانات"</li>
+  <li>نوع جهازك (iOS/Android)</li>
+  <li>تاريخ الحذف</li>
+  <li>ما إذا كنت استخدمت النسخ الاحتياطية السحابية</li>
+</ul>
+<p>سنرد خلال 48 ساعة بالتأكيد.</p>
+
+<h2>استكشاف الأخطاء وإصلاحها</h2>
+
+<h3>لا يمكن العثور على خيار الحذف في التطبيق؟</h3>
+<ul>
+  <li>تأكد من أنك تستخدم أحدث إصدار من تدبير (تحقق من App Store/Play Store للتحديثات)</li>
+  <li>في الإصدارات القديمة، انتقل إلى الإعدادات ← متقدم ← إعادة تعيين التطبيق</li>
+  <li>اتصل بالدعم إذا كان الخيار مفقوداً: <a href="mailto:support@tadbirlabs.com">support@tadbirlabs.com</a></li>
+</ul>
+
+<h3>لا تزال البيانات تظهر بعد الحذف؟</h3>
+<ul>
+  <li>أعد تشغيل جهازك لمسح البيانات المخزنة مؤقتاً</li>
+  <li>تحقق مما إذا كان لديك أجهزة متعددة مثبت عليها تدبير (احذف من كل جهاز بشكل منفصل)</li>
+  <li>إذا كنت تستخدم المزامنة السحابية، قم بتعطيل المزامنة أولاً، ثم احذف البيانات المحلية على جميع الأجهزة</li>
+</ul>
+
+<h3>لن يتم حذف النسخ الاحتياطية السحابية؟</h3>
+<ul>
+  <li>تأكد من أن لديك إذن لحذف الملفات في مساحة التخزين السحابية الخاصة بك</li>
+  <li>تحقق مما إذا كانت النسخ الاحتياطية في مجلد مشترك (قد تحتاج إلى أذونات المالك)</li>
+  <li>اتصل بدعم Google/Apple لمشاكل حذف التخزين السحابي</li>
+</ul>
+
+<h2>إعادة تثبيت تدبير بعد الحذف</h2>
+<p>إذا قررت استخدام تدبير مرة أخرى بعد الحذف:</p>
+<ul>
+  <li>يمكنك إعادة تنزيل التطبيق من App Store أو Google Play Store</li>
+  <li>جميع البيانات المحذوفة سابقاً قد اختفت نهائياً ولا يمكن استردادها</li>
+  <li>ستبدأ من جديد بصفحة نظيفة</li>
+  <li>إذا قمت بتصدير بياناتك قبل الحذف، يمكنك استيرادها مرة أخرى (إذا كانت ميزة الاستيراد متاحة)</li>
+</ul>
+
+<h2>تواصل معنا</h2>
+<p>إذا كانت لديك أسئلة حول حذف البيانات أو كنت بحاجة إلى مساعدة:</p>
+<ul>
+  <li><strong>استفسارات الخصوصية:</strong> <a href='mailto:privacy@tadbirlabs.com'>privacy@tadbirlabs.com</a></li>
+  <li><strong>الدعم الفني:</strong> <a href='mailto:support@tadbirlabs.com'>support@tadbirlabs.com</a></li>
+  <li><strong>استفسارات عامة:</strong> <a href='mailto:tadbirlabs@gmail.com'>tadbirlabs@gmail.com</a></li>
+</ul>
+<p><strong>وقت الاستجابة:</strong> نهدف إلى الرد على الاستفسارات المتعلقة بالحذف خلال 48 ساعة والأسئلة العامة خلال 5 أيام عمل.</p>
+
+<hr>
+
+<p class="text-center" style="margin-top: 48px; color: var(--text-muted); font-size: 0.875rem;">
+  دليل حذف البيانات هذا ساري المفعول اعتباراً من 9 أكتوبر 2025، وينطبق على جميع مستخدمي تطبيقات تدبير للأجهزة المحمولة.
+</p>
+
+<div class="footer">
+  © <span class="year"></span> TadbirLabs • <a href="mailto:tadbirlabs@gmail.com">tadbirlabs@gmail.com</a> • <a href="/ar/privacy/">الخصوصية</a> • <a href="/ar/terms/">الشروط</a>
+</div>
+
 </div></main>
+
 <script src="/assets/js/app.js"></script>
 </body></html>

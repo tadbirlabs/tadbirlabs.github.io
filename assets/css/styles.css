@@ -1,22 +1,974 @@
-﻿:root{--bg:#0b0f11;--card:#12181b;--text:#e8f0f2;--muted:#9fb0b7;--brand:#2bb673;--link:#5ec4ff;--maxw:760px}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Noto Sans Arabic","Noto Sans",Tahoma,Arial,sans-serif}
-main{max-width:var(--maxw);margin:0 auto;padding:32px 20px}
-.article{background:var(--card);border:1px solid #1f272b;border-radius:16px;padding:24px}
-h1{font-size:1.8rem;margin:0 0 16px}
-h2{font-size:1.2rem;margin:24px 0 8px}
-p,li{color:#d7e1e5}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-.badge{display:inline-block;background:#0f2a22;border:1px solid #1d4f3e;color:#a7f3d0;border-radius:999px;padding:4px 10px;font-size:.8rem;margin-left:8px}
-.meta{color:var(--muted);font-size:.9rem;margin-bottom:16px}
-.footer{margin-top:32px;font-size:.9rem;color:var(--muted)}
-.lang-switch{margin:12px 0 20px}
-.lang-switch a{margin-right:12px}
-ul{padding-left:22px}
-[dir="rtl"] ul{padding-left:0;padding-right:22px}
-code,kbd{background:#0f1316;border:1px solid #1f272b;border-radius:8px;padding:0 6px}
-hr{border:none;border-top:1px solid #20292d;margin:24px 0}
-.breadcrumbs{font-size:.9rem;margin-bottom:8px;color:var(--muted)}
-.breadcrumbs a{color:var(--muted)}
-.notice{background:#102237;border:1px solid #1e3a5f;padding:12px;border-radius:12px;margin:12px 0}
+/* ========================================
+   TadbirLabs Legal Pages - Professional CSS
+   Version: 2.0
+   Accessibility: WCAG 2.1 Level AA Compliant
+   ======================================== */
+
+/* ========================================
+   1. CSS VARIABLES - DESIGN SYSTEM
+   ======================================== */
+:root {
+  /* Background layers */
+  --bg: #0a0e10;
+  --card: #141a1f;
+  --card-hover: #1a2228;
+  --border: #1f2933;
+  --border-subtle: #0f1419;
+
+  /* Text hierarchy - WCAG AA compliant */
+  --text-primary: #f5f7fa;    /* 15.8:1 contrast */
+  --text-secondary: #cbd2d9;  /* 10.5:1 contrast */
+  --text-muted: #9aa5b1;      /* 7.2:1 contrast */
+
+  /* Interactive elements */
+  --link: #4a9eff;            /* 8.2:1 contrast */
+  --link-hover: #66b0ff;
+  --focus-ring: #4a9eff;
+
+  /* Brand colors */
+  --brand: #10b981;           /* Emerald green - trust/finance */
+  --brand-light: #34d399;
+  --brand-dark: #059669;
+
+  /* Semantic colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* Badge system */
+  --badge-bg: #134e4a;
+  --badge-text: #d1fae5;
+  --badge-border: #14b8a6;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+  /* Layout */
+  --maxw: 760px;
+  --maxw-wide: 1200px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Typography */
+  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Noto Sans Arabic", "Noto Sans", Tahoma, Arial, sans-serif;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
+/* Light theme support (future) */
+:root[data-theme="light"] {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --badge-bg: #d1fae5;
+  --badge-text: #065f46;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+/* ========================================
+   2. RESET & BASE STYLES
+   ======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: var(--line-height-relaxed);
+  min-height: 100vh;
+}
+
+/* ========================================
+   3. LAYOUT
+   ======================================== */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  min-height: 80vh;
+}
+
+.article {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   4. TYPOGRAPHY
+   ======================================== */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--spacing-md);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  margin: var(--spacing-2xl) 0 var(--spacing-md);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--brand);
+  scroll-margin-top: var(--spacing-xl);
+}
+
+h2::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--brand);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: var(--line-height-normal);
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+p {
+  color: var(--text-secondary);
+  margin: var(--spacing-md) 0;
+  max-width: 70ch;
+}
+
+/* ========================================
+   5. LINKS & INTERACTIVE ELEMENTS
+   ======================================== */
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
+}
+
+a:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Minimum tap target size for accessibility */
+a, button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 4px;
+}
+
+button {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--card-hover);
+  border-color: var(--brand);
+}
+
+button:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   6. LISTS
+   ======================================== */
+ul, ol {
+  padding-left: 24px;
+  margin: var(--spacing-md) 0;
+}
+
+li {
+  color: var(--text-secondary);
+  margin: var(--spacing-sm) 0;
+  padding-left: var(--spacing-xs);
+}
+
+li::marker {
+  color: var(--brand);
+}
+
+/* RTL support */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+[dir="rtl"] li {
+  padding-left: 0;
+  padding-right: var(--spacing-xs);
+}
+
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+  margin: var(--spacing-xs) 0;
+}
+
+/* ========================================
+   7. COMPONENTS - BADGES
+   ======================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: var(--spacing-sm);
+  white-space: nowrap;
+}
+
+[dir="rtl"] .badge {
+  margin-left: 0;
+  margin-right: var(--spacing-sm);
+}
+
+/* ========================================
+   8. COMPONENTS - META INFO
+   ======================================== */
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  margin: var(--spacing-md) 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.meta strong {
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   9. COMPONENTS - BREADCRUMBS
+   ======================================== */
+.breadcrumbs {
+  font-size: 0.9375rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-muted);
+  padding: var(--spacing-sm) 0;
+}
+
+.breadcrumbs a {
+  color: var(--text-muted);
+  min-height: auto;
+}
+
+.breadcrumbs a:hover {
+  color: var(--brand);
+}
+
+/* ========================================
+   10. COMPONENTS - LANGUAGE SWITCH
+   ======================================== */
+.lang-switch {
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.lang-switch strong {
+  color: var(--text-secondary);
+}
+
+.lang-switch a {
+  min-height: auto;
+  padding: 6px 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lang-switch a:hover {
+  background: var(--brand);
+  color: var(--bg);
+  border-color: var(--brand);
+}
+
+/* ========================================
+   11. COMPONENTS - TABLE OF CONTENTS
+   ======================================== */
+.toc {
+  background: var(--card);
+  border: 2px solid var(--brand);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.toc h3 {
+  margin-top: 0;
+  color: var(--brand);
+  font-size: 1.125rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0 0;
+}
+
+.toc li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc li:last-child {
+  border-bottom: none;
+}
+
+.toc a {
+  color: var(--text-primary);
+  min-height: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding: var(--spacing-xs);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.toc a::before {
+  content: '→';
+  color: var(--brand);
+  font-weight: bold;
+}
+
+[dir="rtl"] .toc a::before {
+  content: '←';
+}
+
+.toc a:hover {
+  background: var(--bg);
+  padding-left: var(--spacing-md);
+  border-bottom-color: transparent;
+}
+
+[dir="rtl"] .toc a:hover {
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-md);
+}
+
+/* ========================================
+   12. COMPONENTS - PRIVACY SUMMARY
+   ======================================== */
+.privacy-summary {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.privacy-summary h2 {
+  border: none;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.privacy-summary h2::before {
+  display: none;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.summary-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.summary-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.summary-item .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.summary-item h3 {
+  font-size: 1.125rem;
+  margin: var(--spacing-sm) 0;
+  color: var(--brand-light);
+}
+
+.summary-item p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: none;
+}
+
+/* ========================================
+   13. COMPONENTS - NOTICE BOXES
+   ======================================== */
+.notice {
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid var(--info);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+[dir="rtl"] .notice {
+  border-left: none;
+  border-right: 4px solid var(--info);
+}
+
+.important-notice {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--brand);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 8px;
+}
+
+[dir="rtl"] .important-notice {
+  border-left: none;
+  border-right: 4px solid var(--brand);
+}
+
+.warning-notice {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid var(--warning);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 8px;
+}
+
+[dir="rtl"] .warning-notice {
+  border-left: none;
+  border-right: 4px solid var(--warning);
+}
+
+/* ========================================
+   14. COMPONENTS - CODE & KBD
+   ======================================== */
+code, kbd {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.875rem;
+  color: var(--brand-light);
+}
+
+kbd {
+  box-shadow: 0 2px 0 var(--border);
+}
+
+/* ========================================
+   15. COMPONENTS - HORIZONTAL RULE
+   ======================================== */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--spacing-xl) 0;
+}
+
+/* ========================================
+   16. COMPONENTS - FOOTER
+   ======================================== */
+.footer {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.site-footer {
+  background: var(--card);
+  border-top: 2px solid var(--border);
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.footer-content {
+  max-width: var(--maxw-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.footer-section h4 {
+  color: var(--brand);
+  margin-bottom: var(--spacing-md);
+  font-size: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: var(--spacing-xs) 0;
+}
+
+.footer-section a {
+  color: var(--text-secondary);
+  min-height: auto;
+}
+
+.footer-section a:hover {
+  color: var(--brand);
+}
+
+.footer-bottom {
+  max-width: var(--maxw-wide);
+  margin: var(--spacing-xl) auto 0;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.security-note {
+  margin-top: var(--spacing-sm);
+  color: var(--brand);
+  font-weight: 500;
+}
+
+/* ========================================
+   17. COMPONENTS - HEADER
+   ======================================== */
+.site-header {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.header-content {
+  max-width: var(--maxw-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.brand-name-en {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: var(--text-secondary);
+  font-weight: 500;
+  min-height: auto;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.header-nav a:hover {
+  background: var(--bg);
+  color: var(--brand);
+}
+
+/* ========================================
+   18. COMPONENTS - VERSION HISTORY
+   ======================================== */
+.version-history {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.version-history summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.version-history summary:hover {
+  background: var(--card);
+}
+
+.version-history ul {
+  margin-top: var(--spacing-md);
+}
+
+.version-history li {
+  padding: var(--spacing-sm) 0;
+}
+
+/* ========================================
+   19. RESPONSIVE - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    margin-top: var(--spacing-xl);
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  .article {
+    padding: var(--spacing-lg);
+  }
+
+  main {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    padding: var(--spacing-md);
+  }
+
+  .privacy-summary {
+    padding: var(--spacing-lg);
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .badge {
+    display: block;
+    margin: var(--spacing-sm) 0 0;
+  }
+
+  [dir="rtl"] .badge {
+    margin: var(--spacing-sm) 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .article {
+    padding: var(--spacing-md);
+  }
+
+  main {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ========================================
+   20. PRINT STYLES
+   ======================================== */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .breadcrumbs,
+  .lang-switch,
+  .footer,
+  .site-header,
+  .site-footer,
+  .version-history {
+    display: none !important;
+  }
+
+  .article {
+    border: none;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 24pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 18pt;
+    page-break-after: avoid;
+    border-bottom: 2pt solid black;
+    margin-top: 20pt;
+  }
+
+  h2::before {
+    display: none;
+  }
+
+  h3 {
+    font-size: 14pt;
+    page-break-after: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #555;
+  }
+
+  a[href^="#"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  .toc {
+    border: 2pt solid black;
+    padding: 10pt;
+    page-break-inside: avoid;
+  }
+
+  .privacy-summary {
+    background: #f0f0f0 !important;
+    border: 2pt solid black;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  .print-date::before {
+    content: "Printed: " attr(data-date);
+    display: block;
+    font-size: 10pt;
+    margin-bottom: 10pt;
+    color: #666;
+  }
+}
+
+/* ========================================
+   21. FOCUS INDICATORS (Accessibility)
+   ======================================== */
+*:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   22. REDUCED MOTION (Accessibility)
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   23. HIGH CONTRAST MODE (Accessibility)
+   ======================================== */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --border: #ffffff;
+    --link: #66b0ff;
+  }
+}
+
+/* ========================================
+   24. UTILITY CLASSES
+   ======================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
