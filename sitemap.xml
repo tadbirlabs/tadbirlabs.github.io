@@ -10,4 +10,12 @@
   <url><loc>https://tadbirlabs.github.io/ar/delete-account/</loc></url>
   <url><loc>https://tadbirlabs.github.io/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tadbirlabs.github.io/ar/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tadbirlabs.github.io/halora/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tadbirlabs.github.io/halora/ar/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tadbirlabs.github.io/halora/privacy/</loc></url>
+  <url><loc>https://tadbirlabs.github.io/halora/ar/privacy/</loc></url>
+  <url><loc>https://tadbirlabs.github.io/halora/terms/</loc></url>
+  <url><loc>https://tadbirlabs.github.io/halora/ar/terms/</loc></url>
+  <url><loc>https://tadbirlabs.github.io/halora/delete-data/</loc></url>
+  <url><loc>https://tadbirlabs.github.io/halora/ar/delete-data/</loc></url>
 </urlset>
