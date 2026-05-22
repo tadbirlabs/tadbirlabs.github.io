@@ -31,6 +31,10 @@ html {
   overflow-x: hidden;
 }
 
+html[dir="rtl"] {
+  direction: ltr;
+}
+
 body {
   margin: 0;
   background: var(--canvas);
@@ -41,6 +45,7 @@ body {
 }
 
 body[dir="rtl"] {
+  direction: rtl;
   text-align: right;
 }
 
@@ -123,6 +128,8 @@ img {
 
 .hero {
   position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-height: 92svh;
   padding: 132px 24px 74px;
   color: var(--white);
@@ -130,6 +137,78 @@ img {
     linear-gradient(90deg, rgba(16, 25, 54, 0.96) 0%, rgba(16, 25, 54, 0.88) 42%, rgba(16, 25, 54, 0.62) 72%, rgba(16, 25, 54, 0.74) 100%),
     radial-gradient(circle at 55% 40%, rgba(232, 167, 53, 0.28), transparent 34%),
     linear-gradient(145deg, #101936, #24335f 55%, #7d6545);
+}
+
+body[dir="rtl"] {
+  font-family: "Noto Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.rtl-site .hero {
+  background:
+    linear-gradient(270deg, rgba(16, 25, 54, 0.97) 0%, rgba(16, 25, 54, 0.91) 46%, rgba(16, 25, 54, 0.68) 74%, rgba(16, 25, 54, 0.82) 100%),
+    radial-gradient(circle at 35% 40%, rgba(232, 167, 53, 0.26), transparent 34%),
+    linear-gradient(215deg, #101936, #24335f 58%, #7d6545);
+}
+
+.rtl-site .hero-inner {
+  justify-content: flex-start;
+}
+
+.rtl-site .hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 620px;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+.rtl-site .eyebrow,
+.rtl-site .section-kicker {
+  text-transform: none;
+}
+
+.rtl-site h1 {
+  font-size: clamp(4rem, 7.4vw, 7.2rem);
+  line-height: 1.03;
+}
+
+.rtl-site .hero-subtitle {
+  max-width: 600px;
+  line-height: 1.9;
+}
+
+.rtl-site .hero-visuals {
+  inset: 92px 49% auto 0;
+  height: min(650px, calc(100% - 130px));
+  opacity: 0.96;
+}
+
+.rtl-site .phone {
+  width: min(23vw, 260px);
+  min-width: 210px;
+}
+
+.rtl-site .phone.one {
+  top: 24px;
+  right: auto;
+  left: 12%;
+  transform: rotate(-4deg);
+}
+
+.rtl-site .phone.two {
+  top: 168px;
+  right: auto;
+  left: 45%;
+  transform: rotate(7deg);
+}
+
+.rtl-site .phone.three {
+  display: none;
+}
+
+.rtl-site .section h2 {
+  line-height: 1.14;
 }
 
 .hero::after {
@@ -816,5 +895,136 @@ th {
 
   .article-hero {
     padding-top: 118px;
+  }
+}
+
+@media (max-width: 980px) {
+  .rtl-site .hero-inner {
+    min-height: 790px;
+  }
+
+  .rtl-site .hero-copy {
+    max-width: 620px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .rtl-site .hero-visuals {
+    inset: auto 0 28px 0;
+    height: 390px;
+  }
+
+  .rtl-site .phone {
+    width: 210px;
+    min-width: 0;
+  }
+
+  .rtl-site .phone.one {
+    top: 0;
+    right: 8%;
+    left: auto;
+  }
+
+  .rtl-site .phone.two {
+    top: 88px;
+    right: 42%;
+    left: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  body[dir="rtl"] .topbar,
+  body[dir="rtl"] .hero {
+    direction: ltr;
+  }
+
+  .rtl-site .topbar {
+    flex-direction: row;
+  }
+
+  .rtl-site .brand-link,
+  .rtl-site .hero-copy {
+    direction: rtl;
+  }
+
+  .rtl-site .hero {
+    padding: 112px 18px 44px;
+  }
+
+  .rtl-site .hero-inner {
+    width: calc(100vw - 36px);
+    max-width: calc(100vw - 36px);
+    min-height: 1080px;
+  }
+
+  .rtl-site .hero-copy,
+  .rtl-site .hero-subtitle {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rtl-site .topbar {
+    width: calc(100% - 48px);
+    padding-inline: 14px;
+  }
+
+  .rtl-site .brand-link {
+    min-width: 0;
+    flex-shrink: 0;
+  }
+
+  .rtl-site .hero-copy {
+    width: min(100%, 320px) !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    padding-right: 0;
+    text-align: center;
+    transform: translateX(-24px);
+  }
+
+  .rtl-site .eyebrow,
+  .rtl-site .hero-subtitle {
+    text-align: center;
+  }
+
+  .rtl-site h1 {
+    font-size: clamp(3rem, 14vw, 3.8rem);
+    line-height: 1.08;
+    transform: translateX(-24px);
+  }
+
+  .rtl-site .hero-actions {
+    align-items: stretch;
+  }
+
+  .rtl-site .hero-actions .button {
+    width: 100%;
+  }
+
+  .rtl-site .hero-proof {
+    align-items: center;
+  }
+
+  .rtl-site .proof-pill {
+    text-align: center;
+  }
+
+  .rtl-site .hero-visuals {
+    inset: auto 0 24px 0;
+    height: 330px;
+  }
+
+  .rtl-site .phone {
+    width: 160px;
+  }
+
+  .rtl-site .phone.one {
+    top: 0;
+    right: 4%;
+  }
+
+  .rtl-site .phone.two {
+    top: 76px;
+    right: 42%;
   }
 }
