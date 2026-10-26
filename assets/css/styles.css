@@ -1006,3 +1006,50 @@ hr {
 .mb-2 { margin-bottom: var(--spacing-sm); }
 .mb-3 { margin-bottom: var(--spacing-md); }
 .mb-4 { margin-bottom: var(--spacing-lg); }
+
+/* ========================================
+   25. STORE BADGES (Download section)
+   ======================================== */
+.download-card {
+  background: linear-gradient(135deg, #071a45 0%, #0b2a5e 60%, #0b7285 100%);
+  border-radius: 12px;
+  color: #ffffff;
+  margin: 24px 0;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.download-card h3 {
+  color: var(--accent-gold-light);
+  margin-top: 0;
+}
+
+.download-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.store-badges {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
+
+.store-badges a,
+.store-badges a:hover {
+  border-bottom: none;
+  line-height: 0;
+  padding: 0;
+}
+
+/* Same visible height for both: the Google Play PNG has a transparent margin. */
+.store-badges .apple { height: 54px; }
+.store-badges .play { height: 80px; margin: -13px -12px; }
+
+.download-card .trademarks {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  margin: 16px 0 0;
+}
