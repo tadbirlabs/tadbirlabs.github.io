@@ -12,8 +12,8 @@ This is a **static GitHub Pages site** for TadbirLabs, hosting legal compliance 
 
 ### Bilingual Structure
 The site mirrors all content in English and Arabic using a simple directory convention:
-- **English pages:** `/privacy/`, `/terms/`, `/delete-account/`
-- **Arabic pages:** `/ar/privacy/`, `/ar/terms/`, `/ar/delete-account/`
+- **English pages:** `/privacy/`, `/terms/`, `/delete-account/`, `/support/`
+- **Arabic pages:** `/ar/privacy/`, `/ar/terms/`, `/ar/delete-account/`, `/ar/support/`
 
 Each HTML file specifies its language attributes:
 - English: `<html lang="en" dir="ltr">`
@@ -30,8 +30,10 @@ The CSS file (`/assets/css/styles.css`) handles RTL layout automatically via the
 ├── ar/privacy/index.html          # Arabic privacy policy
 ├── terms/index.html               # English terms
 ├── ar/terms/index.html            # Arabic terms
-├── delete-account/index.html      # English delete account page
-├── ar/delete-account/index.html   # Arabic delete account page
+├── delete-account/index.html      # English "Delete Your Data" page
+├── ar/delete-account/index.html   # Arabic "Delete Your Data" page
+├── support/index.html             # English support page (App Store Support URL)
+├── ar/support/index.html          # Arabic support page
 ├── assets/
 │   ├── css/styles.css            # Single shared stylesheet for all pages
 │   └── js/app.js                 # Single shared script (year updater)
