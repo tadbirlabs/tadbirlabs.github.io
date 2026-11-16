@@ -19,7 +19,7 @@ Each HTML file specifies its language attributes:
 - English: `<html lang="en" dir="ltr">`
 - Arabic: `<html lang="ar" dir="rtl">`
 
-The CSS file (`/assets/css/styles.css`) handles RTL layout automatically via the `[dir="rtl"]` selector.
+The stylesheets (`/assets/css/home.css` for the two home pages, `/assets/css/pages.css` for every other page) use logical properties, so Arabic pages mirror through `dir="rtl"`.
 
 ### File Structure
 ```
@@ -35,7 +35,8 @@ The CSS file (`/assets/css/styles.css`) handles RTL layout automatically via the
 ├── support/index.html             # English support page (App Store Support URL)
 ├── ar/support/index.html          # Arabic support page
 ├── assets/
-│   ├── css/styles.css            # Single shared stylesheet for all pages
+│   ├── css/home.css              # The two home pages
+│   ├── css/pages.css             # Every other page (legal, support, download)
 │   └── js/app.js                 # Single shared script (year updater)
 ├── .nojekyll                      # Disables Jekyll processing
 ├── robots.txt                     # Search engine directives
@@ -44,9 +45,9 @@ The CSS file (`/assets/css/styles.css`) handles RTL layout automatically via the
 ```
 
 ### Shared Assets
-- **CSS:** All pages use `/assets/css/styles.css` with absolute paths
+- **CSS:** The home pages use `/assets/css/home.css`; every other page uses `/assets/css/pages.css`, with absolute paths
 - **JavaScript:** All pages use `/assets/js/app.js` which updates copyright year via `.year` class
-- **Design:** Dark theme with consistent card-based layout, breadcrumbs, and language switches
+- **Design:** The Tadbir Labs brand: navy and gold from the app icon, Cairo and Jost served from `/assets/fonts/`, one navy band with the site bar and the page title, light and dark by the visitor's system setting. The reference is `docs/brand/BRAND_SHEET.md` in the app repository
 
 ## Development Workflow
 
