@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – TadbirLabs</title>
-<meta name="description" content="Tadbir privacy policy: your financial records stay on your device. Only purchase and subscription details are processed, by Apple, Google and RevenueCat. No ads, no analytics, no tracking.">
+<meta name="description" content="Tadbir privacy policy: your financial records stay on your device unless you export them or turn on the optional encrypted Google Drive backup. Purchase and subscription details are processed by Apple, Google and RevenueCat. No ads, no analytics, no tracking.">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <meta property="og:title" content="Privacy Policy – TadbirLabs">
-<meta property="og:description" content="Tadbir privacy policy: your financial records stay on your device. Only purchase and subscription details are processed, by Apple, Google and RevenueCat. No ads, no analytics, no tracking.">
+<meta property="og:description" content="Tadbir privacy policy: your financial records stay on your device unless you export them or turn on the optional encrypted Google Drive backup. Purchase and subscription details are processed by Apple, Google and RevenueCat. No ads, no analytics, no tracking.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tadbirlabs.github.io/privacy/">
 <link rel="canonical" href="https://tadbirlabs.github.io/privacy/">
@@ -133,20 +133,20 @@
 
 <h3>Your Device's Own Backups</h3>
 <p>If your device backs up its apps (for example iCloud Backup on iPhone, or Google's backup on Android), those backups may include Tadbir's data, and Android may restore it if you reinstall Tadbir. These backups are run by Apple or Google according to your device settings and their privacy policies. We cannot access them.</p>
-<p>On Android, these backups include Tadbir's database and the copies Tadbir keeps of your data from before a restore (kept for 14 days). They leave out the keys and settings of the Google Drive backup, so a device backup can never open your cloud copy.</p>
+<p>On Android, these backups include Tadbir's database and the copies Tadbir keeps of your data from before a restore (kept for 14 days). They leave out the keys and settings of the Google Drive backup, so a device backup can never open your cloud copy. On iPhone and iPad, the key of the Google Drive backup is kept in the device's Keychain for that device only: it is not synced to iCloud and cannot be restored to another device.</p>
 
 <h3 id="drive-backup">Optional Google Drive Backup</h3>
-<p>In versions of Tadbir that offer cloud backup, you can connect your own Google Drive. It is off until you turn it on, and Tadbir works fully without it.</p>
+<p>In versions of Tadbir that offer cloud backup, you can connect your own Google Drive. Nothing is sent until you connect it yourself, and Tadbir works fully without it.</p>
 <ul>
   <li><strong>What Tadbir asks Google for:</strong> access only to its own hidden app folder in your Google Drive. Tadbir cannot see, change or delete your other Drive files.</li>
-  <li><strong>What is uploaded:</strong> a copy of your Tadbir database, encrypted on your device before it leaves it, with a key protected by a backup password that you choose. Attachment files are not included.</li>
-  <li><strong>Who can read it:</strong> only someone who has your backup password or your recovery key. We cannot read it and neither can Google. We cannot reset the password. If you lose the password, the recovery key and every connected device, the cloud copy cannot be opened by anyone.</li>
-  <li><strong>What Google can see:</strong> that the files exist, their number, sizes and dates, whether a backup came from Android or iPhone, and random IDs that Tadbir gives to your data and your device.</li>
+  <li><strong>What is uploaded:</strong> a copy of your Tadbir database, encrypted on your device before it leaves it, with a key protected by a backup password that you choose and by a recovery key shown at setup. Attachment files are not included. Tadbir also saves small files there that hold this protected key and, after you delete cloud data, a small marker so that your other devices stop using it. None of these files contains your records.</li>
+  <li><strong>Who can read it:</strong> a device you connected, or someone who has your backup password or your recovery key. We cannot read it and neither can Google. We cannot reset the password. If you lose the password, the recovery key and every connected device, the cloud copy cannot be opened by anyone.</li>
+  <li><strong>What Google can see:</strong> that the files exist, their names, number, sizes and dates, the version of Tadbir that made them, whether a backup came from Android or iPhone, and other technical details of the files and their encryption, such as counters and random IDs that Tadbir gives to your data, your key and your device. None of it contains your records.</li>
   <li><strong>Your Google account:</strong> Tadbir reads the account's email address and name from Google Drive to show you which account is connected. It does not send them to us or to anyone else.</li>
   <li><strong>Where it goes:</strong> from your device directly to your Google Drive. We run no server in between and receive nothing.</li>
-  <li><strong>Deleting it:</strong> Tadbir removes older backups automatically. "Delete cloud data" in the app removes all of them. "Disconnect" stops backups on that device and leaves the files in your Drive. You can also remove Tadbir's access and its hidden data in your Google account settings.</li>
+  <li><strong>Deleting it:</strong> Tadbir removes older backups automatically. "Delete cloud data" in the app removes all of them. "Disconnect" stops backups on that device and leaves the files in your Drive. You can also delete Tadbir's hidden data, or remove Tadbir, in your Google Drive settings.</li>
 </ul>
-<p>Tadbir's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Tadbir uses this access only to save and restore your backups, and never for advertising.</p>
+<p>Tadbir's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Tadbir uses this access only to show which account is connected and to save, list, restore and delete your backups, and never for advertising.</p>
 
 <h3>When You Contact Us</h3>
 <p>If you email us or message us on Telegram, we receive your email address or Telegram account and whatever you include, such as screenshots or files. We use it only to answer you.</p>
@@ -180,7 +180,7 @@
   <li><strong>Notifications:</strong> for the reminders and summaries you choose. They stay off until you turn them on, and they use general text that never shows your amounts or balances.</li>
   <li><strong>Alarms &amp; reminders, and run at startup (Android):</strong> to deliver your reminders on time when Android allows it, and to set them again after your device restarts.</li>
   <li><strong>Face ID or fingerprint:</strong> only if you turn on biometric unlock in App Lock.</li>
-  <li><strong>Internet and billing:</strong> for purchases and Premium status checks.</li>
+  <li><strong>Internet and billing:</strong> for purchases and Premium status checks, and for the Google Drive backup if you connect it.</li>
 </ul>
 <p>Android also lists some technical permissions that do not give access to your personal data, such as network access, vibration and running scheduled tasks.</p>
 <p>Tadbir does not ask for access to your contacts, microphone, location or phone calls.</p>
@@ -191,7 +191,7 @@
 <ul>
   <li>Your data stays on your device until you delete it. You can delete individual records in the app. Deleted attachment files are kept in a hidden folder for 7 days, then removed the next time you open Tadbir.</li>
   <li>To remove everything, uninstall Tadbir, or on Android clear the app's storage in system settings. This removes the database, attachments and settings. On iPhone and iPad, the system may keep the App Lock PIN record (a salted hash, not the PIN itself) in the device keychain after you uninstall. It contains no financial data.</li>
-  <li>Copies in your device backups, or in files you exported, stay until you delete those backups or files.</li>
+  <li>Copies in your device backups, in your Google Drive backup, or in files you exported, stay until you delete those backups or files.</li>
 </ul>
 
 <h3>Purchase Records</h3>
