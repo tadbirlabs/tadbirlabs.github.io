@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **static GitHub Pages site** for TadbirLabs, hosting legal compliance pages for the Tadbir mobile app (an Arabic-first, offline-first expense tracker). The site is published at `tadbirlabs.github.io`.
+This is a **static GitHub Pages site** for TadbirLabs, hosting legal compliance pages for the Tadbir mobile app (an Arabic-first, offline-first expense tracker). The site is published at `tadbirlabs.net` (the old `tadbirlabs.github.io` addresses redirect).
 
 **Core purpose:** Provide bilingual (English/Arabic) legal documentation including Privacy Policy, Terms of Use, and Delete Account information required for mobile app store compliance.
 
@@ -48,6 +48,29 @@ The stylesheets (`/assets/css/home.css` for the two home pages, `/assets/css/pag
 - **CSS:** The home pages use `/assets/css/home.css`; every other page uses `/assets/css/pages.css`, with absolute paths
 - **JavaScript:** All pages use `/assets/js/app.js` which updates copyright year via `.year` class
 - **Design:** The Tadbir Labs brand: navy and gold from the app icon, Cairo and Jost served from `/assets/fonts/`, one navy band with the site bar and the page title, light and dark by the visitor's system setting. The reference is `docs/brand/BRAND_SHEET.md` in the app repository
+
+## Guides and calculators (since November 2026)
+
+- `/ar/guides/` holds Arabic guides with an index page. Two of them carry a
+  calculator (`/assets/js/calc.js`) that runs in the browser and sends nothing.
+- The guide pages are generated. Their content, the generator, the home page
+  texts and the calculator tests live outside this repository, in the owner's
+  marketing folder (`site/`: `guides_ar*.py`, `content_ar.py`,
+  `build_guides.py`, `home_text.py`, `apply_home.py`, `tests/calc.test.js`,
+  `og/build_og.py` for the share pictures). Change a guide there and rebuild;
+  a hand edit of the HTML is lost at the next build.
+- Rules for a guide: one distinct task, an example whose numbers are checked
+  by hand, only what the shipped app does, labels in «» equal to the app's own
+  strings, no vowel marks, no dialect, no other app named.
+- Run `node tests/calc.test.js <this folder>` after any change to `calc.js`.
+- Guides exist in Arabic only, so they carry no hreflang. Inner page pairs
+  carry `ar`, `en` and `x-default` (the English page).
+- `sitemap.xml` gives every entry a `lastmod`: the day of the page's last real
+  change, not of a head-only edit.
+- `95c4d17f9b6793e7a7d4a6802edc7829.txt` at the root is the IndexNow key; keep it. After a publish, new
+  or changed addresses can be sent to `https://api.indexnow.org/indexnow`.
+- `/app/`, `/ar/app/` and `/get/` are link pages that send phones to the
+  stores; they are `noindex` and stay out of the sitemap.
 
 ## Development Workflow
 
