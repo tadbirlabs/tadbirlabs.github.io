@@ -8,16 +8,25 @@
 
   var MAX_MINOR = 1e14; // 1,000,000,000,000.00
 
-  // "1,500.5", "١٥٠٠٫٥", "1 500" -> 150050. Returns NaN for anything else.
-  function toMinor(value) {
-    var s = String(value == null ? '' : value).trim();
-    if (!s) return NaN;
-    s = s.replace(/[٠-٩]/g, function (d) { return String(d.charCodeAt(0) - 0x0660); })
-         .replace(/[۰-۹]/g, function (d) { return String(d.charCodeAt(0) - 0x06F0); })
-         .replace(/٫/g, '.')            // Arabic decimal separator
-         .replace(/[٬,\s ]/g, ''); // thousands separators and spaces
-    if (!/^\d+(\.\d+)?$/.test(s)) return NaN;
-    var minor = Math.round(parseFloat(s) * 100);
+  // Latin digits and a "." for the decimal mark, whatever the user typed.
+  function normalise(value) {
+    return String(value == null ? '' : value).trim()
+      .replace(/[٠-٩]/g, function (d) { return String(d.charCodeAt(0) - 0x0660); })
+      .replace(/[۰-۹]/g, function (d) { return String(d.charCodeAt(0) - 0x06F0); })
+      .replace(/٫/g, '.')            // Arabic decimal separator
+      .replace(/[٬,\s ]/g, ''); // thousands separators and spaces
+  }
+
+  // "1,500.5", "١٥٠٠٫٥", "1 500" -> 150050. Read from the text itself, with no
+  // floating point. Digits beyond the second decimal round the amount up, or
+  // down when `down` is true: a target or a debt never shrinks, and an amount
+  // already saved or paid never grows. Returns NaN for anything else.
+  function toMinor(value, down) {
+    var m = /^(\d{1,13})(?:\.(\d*))?$/.exec(normalise(value));
+    if (!m) return NaN;
+    var decimals = (m[2] || '') + '00';
+    var minor = parseInt(m[1], 10) * 100 + parseInt(decimals.slice(0, 2), 10);
+    if (!down && /[1-9]/.test(decimals.slice(2))) minor += 1;
     return minor > MAX_MINOR ? NaN : minor;
   }
 
@@ -30,10 +39,11 @@
 
   function ceilDiv(a, b) { return Math.floor((a + b - 1) / b); }
 
+  // A count of months: whole numbers only ("12" or "12.0", never "1.001").
   function wholeNumber(value, max) {
-    var n = toMinor(value);
-    if (isNaN(n) || n % 100 !== 0) return NaN;
-    n = n / 100;
+    var m = /^(\d{1,6})(?:\.0*)?$/.exec(normalise(value));
+    if (!m) return NaN;
+    var n = parseInt(m[1], 10);
     return n >= 1 && n <= max ? n : NaN;
   }
 
@@ -149,11 +159,11 @@
       error.hidden = true;
       var total = toMinor(field(kind === 'savings' ? 'target' : 'amount').value);
       var done = field(kind === 'savings' ? 'saved' : 'paid').value.trim();
-      var before = done ? toMinor(done) : 0;
+      var before = done ? toMinor(done, true) : 0;
       if (isNaN(total) || total <= 0 || isNaN(before)) return fail('amount');
       var byPeriod = mode() === 'period';
       var months = byPeriod ? wholeNumber(field('months').value, MAX_MONTHS) : 0;
-      var each = byPeriod ? 0 : toMinor(field('each').value);
+      var each = byPeriod ? 0 : toMinor(field('each').value, true);
       if (byPeriod && isNaN(months)) return fail('months');
       if (!byPeriod && (isNaN(each) || each <= 0)) return fail('each');
 
