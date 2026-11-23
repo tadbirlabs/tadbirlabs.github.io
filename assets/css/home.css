@@ -217,3 +217,66 @@ section { padding-block: 84px; }
   .getbar a { display: flex; align-items: center; justify-content: center; min-height: 48px; color: var(--navy); background: var(--gold); font-weight: 700; text-decoration: none; border-radius: 12px; }
   .getbar a:focus-visible { outline: 3px solid var(--on-navy); outline-offset: 2px; }
 }
+
+/* Astryx design layer (November 2026). Astryx's spacing, radius, elevation and
+   motion scales, applied to the Tadbir brand colors. The page stays static HTML,
+   with no React and no added script, so search and load speed are unchanged. */
+:root {
+  --spacing-2: .5rem; --spacing-3: .75rem; --spacing-4: 1rem; --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem; --spacing-8: 2rem; --spacing-12: 3rem;
+  --radius-element: 8px; --radius-container: 12px; --radius-page: 28px; --radius-full: 9999px;
+  --shadow-low: 0 1px 1px rgba(0, 24, 71, .08), 0 2px 8px rgba(0, 24, 71, .06);
+  --shadow-med: 0 1px 2px rgba(0, 24, 71, .1), 0 4px 12px rgba(0, 24, 71, .08);
+  --shadow-high: 0 2px 2px rgba(0, 24, 71, .1), 0 12px 28px rgba(0, 24, 71, .14);
+  --duration-fast: 175ms; --ease-standard: cubic-bezier(.24, 1, .4, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-low: 0 1px 1px rgba(0, 0, 0, .3), 0 2px 8px rgba(0, 0, 0, .22);
+    --shadow-med: 0 1px 2px rgba(0, 0, 0, .34), 0 4px 12px rgba(0, 0, 0, .28);
+    --shadow-high: 0 2px 2px rgba(0, 0, 0, .36), 0 12px 28px rgba(0, 0, 0, .42);
+  }
+}
+
+.mast { background: radial-gradient(90% 80% at 85% 0%, var(--navy-2) 0%, var(--navy) 62%); }
+[dir="rtl"] .mast { background: radial-gradient(90% 80% at 15% 0%, var(--navy-2) 0%, var(--navy) 62%); }
+.nav-links a:not(.lang) { padding-inline: var(--spacing-3); border-radius: var(--radius-element); transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); }
+.nav-links a:hover { background: rgba(255, 255, 255, .1); }
+.nav-links { gap: var(--spacing-2); }
+.nav .lang { border-radius: var(--radius-full); transition: filter var(--duration-fast) var(--ease-standard); }
+.badges a { transition: transform var(--duration-fast) var(--ease-standard); }
+.badges a:hover { transform: translateY(-2px); }
+.trust li { background: rgba(255, 255, 255, .06); border-radius: var(--radius-full); }
+
+.head { gap: var(--spacing-3); margin-block-end: var(--spacing-8); }
+
+.promises { gap: var(--spacing-5); }
+.promise, .also li, .plan, .guides a {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-container);
+  box-shadow: var(--shadow-low);
+  transition: box-shadow var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+.promise { padding: var(--spacing-6); border-block-start: 3px solid var(--gold); }
+.promise:hover, .also li:hover, .guides a:hover { box-shadow: var(--shadow-med); transform: translateY(-2px); }
+.plan { padding: var(--spacing-8); }
+.plan.premium { border: 2px solid var(--gold); box-shadow: var(--shadow-high); }
+
+.feature { gap: var(--spacing-12); }
+.feature .device { box-shadow: var(--shadow-high); }
+
+/* Privacy: one panel, with its two groups side by side on wide screens */
+.ledger { grid-template-columns: minmax(0, 1fr); }
+.ledger > div { border: 1px solid rgba(255, 255, 255, .12); border-radius: var(--radius-container); padding: var(--spacing-6); }
+.ledger ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--spacing-8); }
+@media (max-width: 760px) { .ledger ul { grid-template-columns: minmax(0, 1fr); } }
+
+.faq { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-container); box-shadow: var(--shadow-low); padding-inline: var(--spacing-6); }
+.faq details:first-child { border-block-start: 0; }
+.faq details:last-child { border-block-end: 0; }
+.btn { border-radius: var(--radius-element); transition: filter var(--duration-fast) var(--ease-standard); }
+.getbar a { border-radius: var(--radius-element); }
+
+@media (prefers-reduced-motion: reduce) {
+  .badges a, .promise, .also li, .plan, .guides a, .nav-links a, .nav .lang, .btn { transition: none; }
+  .badges a:hover, .promise:hover, .also li:hover, .guides a:hover { transform: none; }
+}
