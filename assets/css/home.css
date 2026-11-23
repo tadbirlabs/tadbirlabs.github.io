@@ -80,7 +80,7 @@ ul { padding: 0; list-style: none; }
 .badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .badges a { display: inline-flex; border-radius: 10px; }
 .badges img { height: 52px; width: auto; }
-.badges img.play { height: 77px; margin: -12px -11px; }
+.badges img.play { height: 77px; max-width: none; margin: -12px -11px; }
 .fine { color: var(--on-navy-muted); font-size: .98rem; }
 .fine strong { color: var(--on-navy); font-weight: 600; }
 .trust { display: flex; flex-wrap: wrap; gap: 8px; margin-block-start: -8px; }
