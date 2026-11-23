@@ -414,3 +414,15 @@ section { padding-block: 84px; }
 @media (prefers-reduced-motion: reduce) {
   .story-screen, .story-focus, .story-steps li { transition: none; transform: none; }
 }
+
+/* Offline, privacy and free promises */
+.pledges { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-4); }
+.pledge { padding: var(--spacing-6); background: var(--navy-2); border: 1px solid rgba(255, 255, 255, .14); border-radius: var(--radius-container); }
+.pledge h3 { color: var(--gold); font-size: clamp(1.2rem, 2vw, 1.45rem); }
+.pledge p { margin-block-start: var(--spacing-2); color: var(--on-navy-muted); }
+#privacy .head { max-width: 46em; }
+#privacy h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+@media (max-width: 760px) {
+  .pledges { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-3); }
+  .pledge { padding: var(--spacing-4) var(--spacing-5); }
+}
