@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#001847">
 <link rel="icon" href="/assets/img/tadbir-icon.png">
 <link rel="preload" href="/assets/fonts/jost-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="/assets/css/home.css?v=10">
+<script>(function(d,n){var u=n.userAgent||'',c=d.classList;c.add('js');if(/iPad|iPhone|iPod/.test(u)||(n.platform==='MacIntel'&&n.maxTouchPoints>1))c.add('os-ios');else if(/Android/.test(u))c.add('os-android')})(document.documentElement,navigator)</script>
+<link rel="stylesheet" href="/assets/css/home.css?v=11">
 <meta property="og:title" content="Tadbir: expense tracker and budget app">
 <meta property="og:description" content="An expense tracker and budget app for your spending, budgets, debts and savings goals. The core features work offline, with no sign-up and no ads.">
 <meta property="og:type" content="website">
@@ -187,24 +187,19 @@
         <h1>Know what's yours and what you owe.</h1>
         <p class="lede">An expense, budget and debt tracker whose core features work offline. It never reads your bank texts or sends your finances to AI.</p>
         <div class="badges">
-          <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77"></a>
+          <a href="https://apps.apple.com/app/id6756894036" data-store="ios"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" data-store="android"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77"></a>
         </div>
         <p class="fine"><strong>Start free. No account.</strong></p>
         <ul class="trust" role="list" aria-label="At a glance"><li>Core features work offline</li><li>Never reads bank texts</li><li>No AI on your finances</li><li>No ads</li></ul>
       </div>
-      <figure class="story" data-story role="group" aria-label="A short story of the Tadbir app: add a 6.50 dollar coffee, see the balance update, then see your debts.">
-        <div class="story-phone"><span class="story-view">
-          <img class="story-screen is-active" src="/assets/img/story/en/home_before.webp" alt="The Tadbir home screen with the total balance, the month's income and spending, accounts and financial health" width="720" height="1436" fetchpriority="high">
-          <img class="story-screen" data-src="/assets/img/story/en/amount.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/en/form.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/en/home_after.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/en/debts.webp" alt="" width="720" height="1436">
-          <span class="story-focus" aria-hidden="true"></span>
-        </span></div>
+      <figure class="story" data-story data-screens="/assets/img/story/en/" data-money="USD{n}" data-keys="6 . 5" data-balance="69787.49 69780.99" data-plane="Airplane mode" role="group" aria-label="A short story of the Tadbir app: add a 6.50 dollar coffee, see the balance update, see your debts, then turn on airplane mode while the app keeps working.">
+        <div class="story-stage"><div class="story-rig"><div class="story-phone"><span class="story-view">
+          <img class="story-screen" src="/assets/img/story/en/home_before.webp" alt="The Tadbir home screen with the total balance, the month's income and spending, accounts and financial health" width="720" height="1436" fetchpriority="high">
+        </span></div></div></div>
         <figcaption class="story-foot">
-          <ol class="story-steps" role="list" aria-hidden="true"><li class="is-active">This is your balance today.</li><li>Coffee for $6.50? Add it.</li><li>Pick the account and category.</li><li>Your balance updates right away.</li><li>And see what's yours and what you owe.</li></ol>
-          <button class="story-toggle" type="button" aria-pressed="false" aria-label="Pause the story" data-pause="Pause the story" data-play="Play the story" hidden><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg></button>
+          <div class="story-ctl"><span class="story-progress" aria-hidden="true"></span><button class="story-toggle" type="button" aria-pressed="false" aria-label="Pause the story" data-pause="Pause the story" data-play="Play the story" hidden><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg></button></div>
+          <ol class="story-steps" role="list"><li class="is-active">This is your balance today.</li><li>Coffee for $6.50? Add it.</li><li>Pick the account and category, then save.</li><li>Your balance updates right away.</li><li>Debts show <span class="k1">what you're owed</span> and <span class="k2">what you owe</span>.</li><li>Even in airplane mode, the core features keep working.</li><li>It all happens on your phone: no bank texts, no AI.</li><li class="is-promise">Know what's yours and what you owe.</li></ol>
         </figcaption>
       </figure>
     </div>
@@ -335,8 +330,8 @@
     <h2 id="get-title">Get Tadbir</h2>
     <p>Free to download on iPhone and Android.</p>
     <div class="badges">
-      <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52" loading="lazy"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77" loading="lazy"></a>
+      <a href="https://apps.apple.com/app/id6756894036" data-store="ios"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52" loading="lazy"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" data-store="android"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -377,6 +372,6 @@
 <div class="getbar" id="getbar" hidden><a href="#get" data-store-link>Get Tadbir free</a></div>
 
 <script src="/assets/js/app.js"></script>
-<script src="/assets/js/home.js" defer></script>
-<script src="/assets/js/story.js" defer></script>
+<script src="/assets/js/home.js?v=2" defer></script>
+<script src="/assets/js/story.js?v=2" defer></script>
 </body></html>

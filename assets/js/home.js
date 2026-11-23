@@ -36,12 +36,10 @@
   if (!bar || !heroBadges || !getSection) return;
 
   // One tap to the right store. Other devices go to the section with both stores.
-  var ua = navigator.userAgent || '';
-  var isIOS = /iPad|iPhone|iPod/.test(ua) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var isAndroid = /Android/.test(ua);
-  var store = isIOS ? heroBadges.querySelector('a[href*="apps.apple.com"]')
-    : isAndroid ? heroBadges.querySelector('a[href*="play.google.com"]')
+  // The page's head script has already marked the device on <html>.
+  var device = document.documentElement.classList;
+  var store = device.contains('os-ios') ? heroBadges.querySelector('[data-store="ios"]')
+    : device.contains('os-android') ? heroBadges.querySelector('[data-store="android"]')
     : null;
   if (store) bar.querySelector('[data-store-link]').href = store.href;
 

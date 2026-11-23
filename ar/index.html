@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#001847">
 <link rel="icon" href="/assets/img/tadbir-icon.png">
 <link rel="preload" href="/assets/fonts/cairo-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="/assets/css/home.css?v=10">
+<script>(function(d,n){var u=n.userAgent||'',c=d.classList;c.add('js');if(/iPad|iPhone|iPod/.test(u)||(n.platform==='MacIntel'&&n.maxTouchPoints>1))c.add('os-ios');else if(/Android/.test(u))c.add('os-android')})(document.documentElement,navigator)</script>
+<link rel="stylesheet" href="/assets/css/home.css?v=11">
 <meta property="og:title" content="تدبير: تطبيق مصاريف وميزانية وديون بالعربية">
 <meta property="og:description" content="تطبيق مصاريف وميزانية وديون، مصمم بالعربية منذ البداية. تعمل الميزات الأساسية بدون إنترنت، بلا تسجيل وبلا إعلانات.">
 <meta property="og:type" content="website">
@@ -188,24 +188,19 @@
         <h1>اعرف ما لك وما عليك.</h1>
         <p class="lede">تطبيق مصاريف وميزانية وديون تعمل ميزاته الأساسية بدون إنترنت. لا يقرأ رسائل بنكك، ولا يرسل بياناتك المالية إلى الذكاء الاصطناعي.</p>
         <div class="badges">
-          <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-ar.svg" alt="تنزيل من App Store" width="156" height="52"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-ar.png" alt="احصل عليه من Google Play" width="199" height="77"></a>
+          <a href="https://apps.apple.com/app/id6756894036" data-store="ios"><img src="/assets/img/badges/app-store-ar.svg" alt="تنزيل من App Store" width="156" height="52"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" data-store="android"><img class="play" src="/assets/img/badges/google-play-ar.png" alt="احصل عليه من Google Play" width="199" height="77"></a>
         </div>
         <p class="fine"><strong>ابدأ مجانًا، بلا حساب.</strong></p>
         <ul class="trust" role="list" aria-label="باختصار"><li>الميزات الأساسية بدون إنترنت</li><li>لا يقرأ رسائل البنك</li><li>بلا ذكاء اصطناعي على أموالك</li><li>بلا إعلانات</li></ul>
       </div>
-      <figure class="story" data-story role="group" aria-label="قصة قصيرة من تطبيق تدبير: إضافة قهوة وحلى بقيمة 45 ريالًا، وتغير الرصيد، ثم عرض الديون.">
-        <div class="story-phone"><span class="story-view">
-          <img class="story-screen is-active" src="/assets/img/story/ar/home_before.webp" alt="الشاشة الرئيسية في تدبير: الرصيد الإجمالي، ودخل الشهر ومصروفه، والحسابات، ودرجة الصحة المالية" width="720" height="1436" fetchpriority="high">
-          <img class="story-screen" data-src="/assets/img/story/ar/amount.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/ar/form.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/ar/home_after.webp" alt="" width="720" height="1436">
-          <img class="story-screen" data-src="/assets/img/story/ar/debts.webp" alt="" width="720" height="1436">
-          <span class="story-focus" aria-hidden="true"></span>
-        </span></div>
+      <figure class="story" data-story data-screens="/assets/img/story/ar/" data-money="SAR {n}" data-keys="4 5" data-balance="95759.57 95714.57" data-plane="وضع الطيران" role="group" aria-label="قصة قصيرة من تطبيق تدبير: إضافة قهوة وحلى بقيمة 45 ريالًا، وتغير الرصيد، وعرض الديون، ثم تشغيل وضع الطيران والتطبيق يعمل كما هو.">
+        <div class="story-stage"><div class="story-rig"><div class="story-phone"><span class="story-view">
+          <img class="story-screen" src="/assets/img/story/ar/home_before.webp" alt="الشاشة الرئيسية في تدبير: الرصيد الإجمالي، ودخل الشهر ومصروفه، والحسابات، ودرجة الصحة المالية" width="720" height="1436" fetchpriority="high">
+        </span></div></div></div>
         <figcaption class="story-foot">
-          <ol class="story-steps" role="list" aria-hidden="true"><li class="is-active">هذا رصيدك اليوم.</li><li>قهوة وحلى بـ 45 ريالًا؟ أضفها.</li><li>اختر الحساب والفئة.</li><li>يتغير رصيدك فورًا.</li><li>وتعرف ما لك وما عليك.</li></ol>
-          <button class="story-toggle" type="button" aria-pressed="false" aria-label="إيقاف القصة مؤقتا" data-pause="إيقاف القصة مؤقتا" data-play="تشغيل القصة" hidden><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg></button>
+          <div class="story-ctl"><span class="story-progress" aria-hidden="true"></span><button class="story-toggle" type="button" aria-pressed="false" aria-label="إيقاف القصة مؤقتا" data-pause="إيقاف القصة مؤقتا" data-play="تشغيل القصة" hidden><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2l10 6-10 6z" fill="currentColor"/></svg></button></div>
+          <ol class="story-steps" role="list"><li class="is-active">هذا رصيدك اليوم.</li><li>قهوة وحلى بـ 45 ريالًا؟ أضفها.</li><li>اختر الحساب والفئة، ثم احفظ.</li><li>يتغير رصيدك فورًا.</li><li>وفي الديون ترى <span class="k1">ما لك</span> <span class="k2">وما عليك</span>.</li><li>حتى في وضع الطيران، الميزات الأساسية تعمل.</li><li>كل شيء يتم على هاتفك: بلا رسائل بنك، وبلا ذكاء اصطناعي.</li><li class="is-promise">اعرف ما لك وما عليك.</li></ol>
         </figcaption>
       </figure>
     </div>
@@ -352,8 +347,8 @@
     <h2 id="get-title">حمّل تدبير</h2>
     <p>تنزيله مجاني على iPhone <span class="waw">و</span> Android.</p>
     <div class="badges">
-      <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-ar.svg" alt="تنزيل من App Store" width="156" height="52" loading="lazy"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-ar.png" alt="احصل عليه من Google Play" width="199" height="77" loading="lazy"></a>
+      <a href="https://apps.apple.com/app/id6756894036" data-store="ios"><img src="/assets/img/badges/app-store-ar.svg" alt="تنزيل من App Store" width="156" height="52" loading="lazy"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" data-store="android"><img class="play" src="/assets/img/badges/google-play-ar.png" alt="احصل عليه من Google Play" width="199" height="77" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -395,6 +390,6 @@
 <div class="getbar" id="getbar" hidden><a href="#get" data-store-link>حمّل تدبير مجانًا</a></div>
 
 <script src="/assets/js/app.js"></script>
-<script src="/assets/js/home.js" defer></script>
-<script src="/assets/js/story.js" defer></script>
+<script src="/assets/js/home.js?v=2" defer></script>
+<script src="/assets/js/story.js?v=2" defer></script>
 </body></html>
