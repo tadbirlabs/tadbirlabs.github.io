@@ -37,7 +37,8 @@ The stylesheets (`/assets/css/home.css` for the two home pages, `/assets/css/pag
 ├── assets/
 │   ├── css/home.css              # The two home pages
 │   ├── css/pages.css             # Every other page (legal, support, download)
-│   └── js/app.js                 # Single shared script (year updater)
+│   ├── js/app.js                 # Shared script (year updater)
+│   └── js/home.js                # Home pages only: phone menu and download bar
 ├── .nojekyll                      # Disables Jekyll processing
 ├── robots.txt                     # Search engine directives
 ├── sitemap.xml                    # Site structure for search engines
@@ -166,6 +167,7 @@ These pages exist primarily for App Store and Google Play compliance. They addre
 
 ## Important Notes
 
+- **Everything here is public:** the repository is public and GitHub Pages serves its files, including `.md` files. Keep plans, reviews and competitor notes out of this folder.
 - **No build tools:** This is pure HTML/CSS/JS with no compilation or bundling
 - **No package.json:** No npm dependencies or scripts
 - **GitHub Pages only:** Not designed to run elsewhere

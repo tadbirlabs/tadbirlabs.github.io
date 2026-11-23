@@ -6,7 +6,8 @@
 <meta name="theme-color" content="#001847">
 <link rel="icon" href="/assets/img/tadbir-icon.png">
 <link rel="preload" href="/assets/fonts/jost-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/home.css">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="/assets/css/home.css?v=2">
 <meta property="og:title" content="Tadbir: expense tracker and budget app">
 <meta property="og:description" content="An expense tracker and budget app for your spending, budgets, debts and savings goals. The core features work offline, with no sign-up and no ads.">
 <meta property="og:type" content="website">
@@ -169,10 +170,13 @@
     <div class="bar">
       <a class="brand" href="/"><img src="/assets/img/tadbir-icon.png" alt="" width="38" height="38">Tadbir Labs</a>
       <nav class="nav" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#plans">Free and Premium</a>
-        <a href="/support/">Support</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="nav-links" id="nav-links">
+          <a href="#privacy">Privacy</a>
+          <a href="#features">Features</a>
+          <a href="#plans">Free and Premium</a>
+          <a href="/support/">Support</a>
+        </div>
         <a class="lang" href="/ar/" lang="ar" hreflang="ar">العربية</a>
       </nav>
     </div>
@@ -186,7 +190,8 @@
           <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52"></a>
           <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77"></a>
         </div>
-        <p class="fine"><strong>Free to start.</strong> No sign-up, no ads.</p>
+        <p class="fine"><strong>Free to start.</strong></p>
+        <ul class="trust" role="list" aria-label="At a glance"><li>Core features work offline</li><li>No sign-up</li><li>No ads</li><li>Doesn't read bank messages</li></ul>
       </div>
       <div class="hero-shot">
         <div class="device back"><img src="/assets/img/screens/debts.webp" alt="" width="540" height="1077" loading="eager"></div>
@@ -218,6 +223,35 @@
         <p>A full Arabic interface, with wording written for the app, beside a complete English one.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="privacy" class="band" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Privacy</p>
+      <h2 id="privacy-title">Stored on your phone, not on our servers</h2>
+      <p>Tadbir Labs has no server that holds your financial records, and the app has no account to sign in to. Here is the short version; the privacy policy has every detail.</p>
+    </div>
+    <div class="ledger">
+      <div>
+        <h3>Stays on your phone</h3>
+        <ul>
+          <li><b>Your records.</b> Transactions, accounts, budgets, debts, goals and receipt photos.</li>
+          <li><b>Your settings.</b> Language, theme, currency, reminders and App Lock.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Goes out</h3>
+        <ul>
+          <li><b>Premium purchases.</b> Handled by Apple or Google, and by RevenueCat, which confirms your subscription under an anonymous ID. On iPhone it also receives a device identifier from Apple.</li>
+          <li><b>Copies you make or share.</b> Backups, exports and shared charts go wherever you save or send them.</li>
+          <li><b>Your phone's own backup.</b> iCloud Backup or Google's backup may include Tadbir's data, depending on your phone's settings.</li>
+          <li><b>Messages you send us.</b> Email and Telegram messages reach us with whatever you attach.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="more"><a href="/privacy/">Read the full privacy policy</a></p>
   </div>
 </section>
 
@@ -298,35 +332,6 @@
   </div>
 </section>
 
-<section id="privacy" class="band" aria-labelledby="privacy-title">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Privacy</p>
-      <h2 id="privacy-title">Stored on your phone, not on our servers</h2>
-      <p>Tadbir Labs has no server that holds your financial records, and the app has no account to sign in to. Here is the short version; the privacy policy has every detail.</p>
-    </div>
-    <div class="ledger">
-      <div>
-        <h3>Stays on your phone</h3>
-        <ul>
-          <li><b>Your records.</b> Transactions, accounts, budgets, debts, goals and receipt photos.</li>
-          <li><b>Your settings.</b> Language, theme, currency, reminders and App Lock.</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Goes out</h3>
-        <ul>
-          <li><b>Premium purchases.</b> Handled by Apple or Google, and by RevenueCat, which confirms your subscription under an anonymous ID. On iPhone it also receives a device identifier from Apple.</li>
-          <li><b>Copies you make or share.</b> Backups, exports and shared charts go wherever you save or send them.</li>
-          <li><b>Your phone's own backup.</b> iCloud Backup or Google's backup may include Tadbir's data, depending on your phone's settings.</li>
-          <li><b>Messages you send us.</b> Email and Telegram messages reach us with whatever you attach.</li>
-        </ul>
-      </div>
-    </div>
-    <p class="more"><a href="/privacy/">Read the full privacy policy</a></p>
-  </div>
-</section>
-
 <section id="plans" aria-labelledby="plans-title">
   <div class="wrap">
     <div class="head">
@@ -404,7 +409,7 @@
   </div>
 </section>
 
-<section class="studio" aria-labelledby="get-title" style="border-block-start:0;padding-block-start:0">
+<section id="get" class="studio" aria-labelledby="get-title" style="border-block-start:0;padding-block-start:0">
   <div class="wrap get">
     <h2 id="get-title">Get Tadbir</h2>
     <p>Free to download on iPhone and Android.</p>
@@ -458,5 +463,8 @@
   </div>
 </footer>
 
+<div class="getbar" id="getbar" hidden><a href="#get" data-store-link>Get Tadbir free</a></div>
+
 <script src="/assets/js/app.js"></script>
+<script src="/assets/js/home.js" defer></script>
 </body></html>
