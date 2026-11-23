@@ -385,7 +385,7 @@ section { padding-block: 84px; }
 .story-rig { transform-style: preserve-3d; }
 .js .story-rig { transform: rotateX(7deg) rotateY(-17deg); will-change: transform; }
 .js[dir="rtl"] .story-rig { transform: rotateX(7deg) rotateY(17deg); }
-.story-phone { position: relative; width: var(--pw); aspect-ratio: 720 / 1436; padding: 9px; box-sizing: content-box; background: linear-gradient(150deg, #232D4C 0%, #0B1020 46%, #141B33 100%); border-radius: 40px; box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, .12) inset; transform-style: preserve-3d; }
+.story-phone { position: relative; width: var(--pw); height: calc(var(--pw) * 1436 / 720); padding: 9px; box-sizing: content-box; background: linear-gradient(150deg, #232D4C 0%, #0B1020 46%, #141B33 100%); border-radius: 40px; box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, .12) inset; transform-style: preserve-3d; }
 .story-phone::before, .story-phone::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
 .story-phone::before { transform: translateZ(-11px); background: #2B3658; }
 .story-phone::after { transform: translateZ(-22px); background: linear-gradient(90deg, #5A678F, #1C2542 22%, #1C2542 78%, #5A678F); box-shadow: 0 30px 50px -18px rgba(0, 0, 0, .55); }
