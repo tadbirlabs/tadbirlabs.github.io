@@ -212,3 +212,52 @@ html[lang="ar"] .calc button { font-weight: 700; }
 .result .table-wrap { margin: 14px 0 0; max-height: 420px; overflow-y: auto; }
 .calc [hidden], .result [hidden], .result[hidden] { display: none; }
 @media print { .calc button, .cta { display: none; } }
+
+/* Astryx design layer (November 2026), matching the home pages: Astryx's spacing,
+   radius, elevation and motion scales on the Tadbir brand colors. Static CSS only. */
+:root {
+  --spacing-2: .5rem; --spacing-3: .75rem; --spacing-4: 1rem; --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem; --spacing-8: 2rem;
+  --radius-element: 8px; --radius-container: 12px; --radius-full: 9999px;
+  --shadow-low: 0 1px 1px rgba(0, 24, 71, .08), 0 2px 8px rgba(0, 24, 71, .06);
+  --shadow-med: 0 1px 2px rgba(0, 24, 71, .1), 0 4px 12px rgba(0, 24, 71, .08);
+  --duration-fast: 175ms; --ease-standard: cubic-bezier(.24, 1, .4, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-low: 0 1px 1px rgba(0, 0, 0, .3), 0 2px 8px rgba(0, 0, 0, .22);
+    --shadow-med: 0 1px 2px rgba(0, 0, 0, .34), 0 4px 12px rgba(0, 0, 0, .28);
+  }
+}
+
+.mast { background: radial-gradient(90% 120% at 85% 0%, var(--navy-2) 0%, var(--navy) 62%); }
+[dir="rtl"] .mast { background: radial-gradient(90% 120% at 15% 0%, var(--navy-2) 0%, var(--navy) 62%); }
+.nav { gap: 4px var(--spacing-2); }
+.nav a:not(.lang) { padding-inline: var(--spacing-3); border-radius: var(--radius-element); transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); }
+.nav a:not(.lang):hover { background: rgba(255, 255, 255, .1); }
+.nav .lang { border-radius: var(--radius-full); }
+
+.privacy-summary, details.version-history, .table-wrap, .related a, .guide-list a, .calc, .result {
+  border-radius: var(--radius-container); box-shadow: var(--shadow-low);
+}
+.privacy-summary { padding: var(--spacing-6); }
+.related a, .guide-list a {
+  transition: box-shadow var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+.related a:hover, .guide-list a:hover { box-shadow: var(--shadow-med); transform: translateY(-2px); }
+.important-notice, .warning-notice { border-radius: var(--radius-element); }
+.cta { border-radius: var(--radius-container); background: radial-gradient(90% 140% at 85% 0%, var(--navy-2) 0%, var(--navy) 70%); box-shadow: var(--shadow-med); }
+[dir="rtl"] .cta { background: radial-gradient(90% 140% at 15% 0%, var(--navy-2) 0%, var(--navy) 70%); }
+.calc input[type="text"], .calc input[type="date"], .calc button { border-radius: var(--radius-element); }
+.calc .choice { border-radius: var(--radius-full); transition: border-color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard); }
+.badges a { transition: transform var(--duration-fast) var(--ease-standard); }
+.badges a:hover { transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a, .related a, .guide-list a, .calc .choice, .badges a { transition: none; }
+  .related a:hover, .guide-list a:hover, .badges a:hover { transform: none; }
+}
+@media print {
+  .mast, [dir="rtl"] .mast { background: none; }
+  .privacy-summary, details.version-history, .table-wrap, .related a, .guide-list a, .calc, .result { box-shadow: none; }
+}

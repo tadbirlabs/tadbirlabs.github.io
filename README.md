@@ -9,15 +9,6 @@ Public GitHub Pages site for TadbirLabs apps.
 - https://tadbirlabs.github.io/delete-account
 - Arabic mirrors under `/ar/...`
 
-## Halora Live URLs
-
-- https://tadbirlabs.github.io/halora/
-- https://tadbirlabs.github.io/halora/ar/
-- https://tadbirlabs.github.io/halora/privacy/
-- https://tadbirlabs.github.io/halora/terms/
-- https://tadbirlabs.github.io/halora/delete-data/
-- Arabic legal mirrors under `/halora/ar/...`
-
 ## Editing
 
 - Update the "Last updated" dates when you change legal content.
