@@ -264,3 +264,15 @@ html[lang="ar"] .calc button { font-weight: 700; }
 
 /* Cairo draws a standalone waw like a Latin g, so beside Latin names it uses the device's Arabic font. */
 .waw { font-family: "Segoe UI", "SF Arabic", "Geeza Pro", "Noto Sans Arabic", "Noto Naskh Arabic", Tahoma, sans-serif; }
+
+/* Phones: compact footer, matching the home pages */
+@media (max-width: 760px) {
+  .foot { padding-block: 28px; }
+  .foot .cols { grid-template-columns: max-content max-content; justify-content: space-between; gap: 18px 16px; }
+  .foot .cols > :first-child { grid-column: 1 / -1; }
+  .foot .brand { margin-block-end: 4px; }
+  .foot h2 { margin-block-end: 6px; }
+  .foot li { padding-block: 2px; font-size: .94rem; }
+  .foot .legal { margin-block-start: 18px; padding-block-start: 14px; font-size: .8rem; }
+}
+@media (max-width: 349px) { .foot .cols { grid-template-columns: minmax(0, 1fr); } }
