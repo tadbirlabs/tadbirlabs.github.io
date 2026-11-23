@@ -145,10 +145,6 @@
   var fade = function (node, points) {
     track(node, points.map(function (point) { return [point[0], { opacity: point[1] }, point[2]]; }));
   };
-  var enter = function (node, at, from) {
-    fade(node, [[at, 0], [at + 160, 1]]);
-    track(node, [[at, { transform: from }, OUT], [at + 380, { transform: 'none' }]]);
-  };
   var rise = function (node, at) {
     track(node, [[at, { opacity: 0, transform: 'translate3d(0,3%,0)' }, OUT], [at + 420, { opacity: 1, transform: 'none' }]]);
   };
@@ -185,18 +181,18 @@
   var okBox = [530, 1098, 158, 218], cellBox = flip([363, 398, 357, 129]), saveBox = [28, 1345, 664, 70];
   var balance = (data.balance || '0 0').split(' ').map(cents);
 
-  var scenes = [], setAmount, setBalance;
+  var setAmount, setBalance;
   var build = function () {
-    var scene = function (from, to) {
+    // Scenes appear and leave through their own animations, so a late script
+    // frame can never leave the wrong screen showing.
+    var scene = function () {
       var node = add(view, 'story-scene', FULL);
       node.setAttribute('aria-hidden', 'true');
-      node.hidden = true;
-      scenes.push([node, from, to]);
       return node;
     };
 
     // Home after the expense: the other figures change and the balance counts down.
-    var home = scene(5100, 12100);
+    var home = scene();
     var after = add(home, '', FULL, 'home_after');
     var ring = add(home, 'story-ring', [118, 290, 484, 132]);
     var total = add(home, 'story-bal', [190, 300, 340, 66]);
@@ -206,7 +202,7 @@
     track(ring, [[tHome - 200, { opacity: 0, transform: 'scale(1.05)' }, OUT], [tHome + 150, { opacity: 1, transform: 'none' }], [7100, { opacity: 1, transform: 'none' }], [7400, { opacity: 0, transform: 'none' }]]);
 
     // New expense: the real form under the real keypad sheet.
-    var form = scene(1100, 5600);
+    var form = scene();
     add(form, '', FULL, 'form');
     var blank = add(form, 'story-undim', cellBox, 'amount'); // the category before it is chosen
     var tapCell = add(form, 'story-flash is-light', cellBox);
@@ -236,15 +232,16 @@
 
     // Debts: what is owed to you, then what you owe.
     var side = 'translate3d(' + (rtl ? -7 : 7) + '%,0,0)';
-    var debts = scene(tDebts - 50, tBudgets + 400);
+    var debts = scene();
     add(debts, '', FULL, 'debts');
     add(debts, 'story-paper', [0, 392, W, 1044]);
     rise(add(debts, '', [0, 396, W, 680], 'debts'), tDebts + 350);
     rise(add(debts, '', [0, 1076, W, 360], 'debts'), tDebts + 1100);
-    enter(debts, tDebts, side);
+    fade(debts, [[tDebts, 0], [tDebts + 160, 1], [tBudgets + 400, 1], [tBudgets + 401, 0]]);
+    track(debts, [[tDebts, { transform: side }, OUT], [tDebts + 380, { transform: 'none' }]]);
 
     // Airplane mode: the app keeps working, here by opening the budgets.
-    var budgets = scene(tBudgets - 50, T + 1);
+    var budgets = scene();
     add(budgets, '', FULL, 'budgets');
     add(budgets, 'story-paper', [0, 250, W, 570]);
     rise(add(budgets, '', [0, 254, W, 279], 'budgets'), tBudgets + 250);
@@ -303,13 +300,9 @@
     }
   };
 
-  // What changes with time but cannot be animated: which scenes exist, and the digits.
+  // What changes with time but cannot be animated: the digits.
   var seen = {};
   var render = function (now) {
-    scenes.forEach(function (item) {
-      var hide = now < item[1] || now > item[2];
-      if (item[0].hidden !== hide) item[0].hidden = hide;
-    });
     var typed = '';
     if (now > 1100 && now < 5600) keys.forEach(function (key, i) { if (now >= tKey + i * pause) typed += key; });
     if (typed !== seen.typed) {
