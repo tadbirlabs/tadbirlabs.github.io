@@ -194,11 +194,11 @@ html[lang="ar"] .calc legend, html[lang="ar"] .calc .field { font-weight: 700; }
 .calc .field small { font-weight: 400; color: var(--muted); font-size: .9rem; }
 .calc input[type="text"], .calc input[type="date"] { font: inherit; font-weight: 400; font-family: var(--latin); padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); min-height: 46px; width: 100%; direction: ltr; }
 [dir="rtl"] .calc input[type="text"], [dir="rtl"] .calc input[type="date"] { text-align: right; }
-.calc input:focus-visible { outline: 3px solid var(--gold); outline-offset: 1px; }
+.calc input:focus-visible { outline: 3px solid var(--action); outline-offset: 1px; }
 .calc button { font: inherit; font-weight: 600; background: var(--action); color: var(--paper); border: 0; border-radius: 10px; padding: 12px 24px; cursor: pointer; justify-self: start; min-height: 46px; }
 html[lang="ar"] .calc button { font-weight: 700; }
 .calc button:hover { filter: brightness(1.1); }
-.calc button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.calc button:focus-visible { outline: 3px solid var(--action); outline-offset: 3px; }
 .calc .error { margin: 0; font-weight: 600; color: #A3261B; }
 @media (prefers-color-scheme: dark) { .calc .error { color: #FFB4A8; } }
 .result { border: 2px solid var(--gold); border-radius: 16px; padding: 22px 24px; margin: 0 0 24px; background: var(--surface); }

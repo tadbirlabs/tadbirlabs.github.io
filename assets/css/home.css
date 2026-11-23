@@ -183,7 +183,7 @@ section { padding-block: 84px; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 1.4rem; line-height: 1; flex: none; }
 .faq details[open] summary::after { content: "\2212"; }
-.faq summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+.faq summary:focus-visible { outline: 3px solid var(--action); outline-offset: 3px; border-radius: 6px; }
 .faq p { color: var(--muted); margin-block-start: 10px; max-width: 46em; }
 .guides { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .guides a { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 6px; }
