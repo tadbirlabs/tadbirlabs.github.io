@@ -51,7 +51,7 @@
     </div>
     <div class="page-head">
       <h1>Privacy Policy</h1>
-      <p class="meta"><strong>Last updated:</strong> Nov 16, 2026 <span style="margin-inline-start: 16px;">Version 3.1</span></p>
+      <p class="meta"><strong>Last updated:</strong> Nov 24, 2026 <span style="margin-inline-start: 16px;">Version 3.2</span></p>
     </div>
   </div>
 </header>
@@ -112,7 +112,7 @@
   <li><strong>Currencies:</strong> the currencies and exchange rates you add or edit.</li>
   <li><strong>Attachments:</strong> photos and files you attach to transactions.</li>
   <li><strong>Settings:</strong> such as language, main currency, theme, the display name and avatar you choose, reminder times and App Lock options.</li>
-  <li><strong>Premium status:</strong> whether Premium is active, and the anonymous ID that RevenueCat assigns to the app (see below).</li>
+  <li><strong>Premium status:</strong> whether Premium is active, and the random ID that RevenueCat assigns to the app (see below).</li>
 </ul>
 <p>If you turn on App Lock, your PIN is saved only as a salted hash in your device's secure storage (the iOS Keychain or the Android Keystore). Face ID and fingerprint checks are done by your device. Tadbir never receives your biometric data.</p>
 <p>If automatic recurring transactions are on (they are by default, and you can turn them off in Settings), Tadbir adds due recurring transactions by itself: when you open the app and, on Android, in the background every few hours. This happens on your device and sends nothing over the internet.</p>
@@ -126,7 +126,7 @@
 <h3>Purchases and Subscriptions</h3>
 <p>When you open the app, view Premium plans, or buy or restore a subscription, and when your subscription renews, the following is processed by the App Store (on iPhone and iPad) or Google Play (on Android), and by RevenueCat, the service we use to manage subscriptions:</p>
 <ul>
-  <li><strong>An anonymous app user ID</strong> created by RevenueCat. It is not your name, your email address or your Apple or Google account.</li>
+  <li><strong>A random app user ID</strong> created by RevenueCat. It is not your name, your email address or your Apple or Google account.</li>
   <li><strong>Purchase and subscription records</strong> from the store: the product, purchase and renewal dates, price and currency, store country or region, transaction identifiers and subscription status.</li>
   <li><strong>Technical details</strong> needed to handle each request: the app version, the device model and system version, your device's language and region settings, the store country, and the IP address of the connection. On iPhone and iPad, this also includes Apple's identifier for vendor, an ID that is the same for all apps from one developer on your device.</li>
 </ul>
@@ -141,7 +141,7 @@
 
 <h3>Your Device's Own Backups</h3>
 <p>If your device backs up its apps (for example iCloud Backup on iPhone, or Google's backup on Android), those backups may include Tadbir's data, and Android may restore it if you reinstall Tadbir. These backups are run by Apple or Google according to your device settings and their privacy policies. We cannot access them.</p>
-<p>On Android, these backups include Tadbir's database and the copies Tadbir keeps of your data from before a restore (kept for 14 days). They leave out the keys and settings of the Google Drive backup, so a device backup can never open your cloud copy. On iPhone and iPad, the key of the Google Drive backup is kept in the device's Keychain for that device only: it is not synced to iCloud and cannot be restored to another device.</p>
+<p>On Android, these backups include Tadbir's database. After a restore from Google Drive, Tadbir keeps a copy of your previous data on your phone for 14 days, and your phone's own backup can include that copy. We never receive it. These backups leave out the keys and settings of the Google Drive backup, so a device backup can never open your cloud copy. On iPhone and iPad, the key of the Google Drive backup is kept in the device's Keychain for that device only: it is not synced to iCloud and cannot be restored to another device.</p>
 
 <h3 id="drive-backup">Optional Google Drive Backup</h3>
 <p>In versions of Tadbir that offer cloud backup, you can connect your own Google Drive. Nothing is sent until you connect it yourself, and Tadbir works fully without it.</p>
@@ -203,7 +203,7 @@
 </ul>
 
 <h3>Purchase Records</h3>
-<p>Apple, Google and RevenueCat keep purchase records according to their own policies and legal duties, such as tax law. To ask us to delete the RevenueCat record of your purchases, email us with your App Store or Google Play order number, and we will delete the matching record. If you keep using Tadbir afterwards, RevenueCat starts a new anonymous record. Deleting the record does not cancel a subscription: cancel it in your App Store or Google Play account.</p>
+<p>Apple, Google and RevenueCat keep purchase records according to their own policies and legal duties, such as tax law. To ask us to delete the RevenueCat record of your purchases, email us with your App Store or Google Play order number, and we will delete the matching record. If you keep using Tadbir afterwards, RevenueCat starts a new record with a new random ID. Deleting the record does not cancel a subscription: cancel it in your App Store or Google Play account.</p>
 
 <h3>Support Messages</h3>
 <p>We keep your emails and messages only as long as we need them to help you and to keep basic records.</p>
@@ -236,6 +236,7 @@
 <details class="version-history">
   <summary>Privacy Policy Version History</summary>
   <ul>
+    <li><strong>v3.2</strong> (Nov 24, 2026) - Clarified the copy kept on your phone after a Google Drive restore and the RevenueCat ID</li>
     <li><strong>v3.1</strong> (Nov 16, 2026) - Added the optional Google Drive backup and what Android's device backup includes</li>
     <li><strong>v3.0</strong> (Nov 5, 2026) - Rewritten to match how the app works today: added purchase data handled by RevenueCat, Apple and Google, device backups and store crash reports; corrected the permissions list; removed descriptions of cloud backup, encryption and other features the app does not have</li>
     <li><strong>v2.0</strong> (October 9, 2025) - Added comprehensive GDPR/CCPA rights, third-party SDK disclosure, detailed data retention policy, improved accessibility</li>
@@ -253,7 +254,7 @@
 <hr>
 
 <p class="text-center" style="margin-top: 48px; color: var(--text-muted); font-size: 0.875rem;">
-  This privacy policy is effective as of Nov 16, 2026, and applies to all users of the Tadbir apps.
+  This privacy policy is effective as of Nov 24, 2026, and applies to all users of the Tadbir apps.
 </p>
 
 </div></main>
