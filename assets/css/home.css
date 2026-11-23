@@ -299,7 +299,7 @@ section { padding-block: 84px; }
 .hero-tag b { color: var(--gold); font-size: .98rem; font-weight: 600; }
 :lang(ar) .hero-tag b { font-weight: 700; }
 .hero-tag small { color: var(--on-navy-muted); font-size: .84rem; }
-.hero-tag.one { inset-block-start: 44px; inset-inline-start: 8px; }
+.hero-tag.one { inset-block-start: 118px; inset-inline-start: 8px; }
 .hero-tag.two { inset-block-end: 44px; inset-inline-end: 8px; }
 @media (max-width: 860px) {
   .hero { gap: 28px; padding-block-end: 40px; }
@@ -325,3 +325,6 @@ section { padding-block: 84px; }
 #get .get p { color: var(--on-navy-muted); }
 #get .get a:not(.btn) { color: inherit; }
 @media (max-width: 860px) { #get { padding-block: 48px; } #get .get { padding: var(--spacing-8) var(--spacing-5); } }
+
+/* Cairo draws a standalone waw like a Latin g, so beside Latin names it uses the device's Arabic font. */
+.waw { font-family: "Segoe UI", "SF Arabic", "Geeza Pro", "Noto Sans Arabic", "Noto Naskh Arabic", Tahoma, sans-serif; }

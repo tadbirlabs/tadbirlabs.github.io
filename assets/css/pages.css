@@ -261,3 +261,6 @@ html[lang="ar"] .calc button { font-weight: 700; }
   .mast, [dir="rtl"] .mast { background: none; }
   .privacy-summary, details.version-history, .table-wrap, .related a, .guide-list a, .calc, .result { box-shadow: none; }
 }
+
+/* Cairo draws a standalone waw like a Latin g, so beside Latin names it uses the device's Arabic font. */
+.waw { font-family: "Segoe UI", "SF Arabic", "Geeza Pro", "Noto Sans Arabic", "Noto Naskh Arabic", Tahoma, sans-serif; }
