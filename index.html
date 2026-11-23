@@ -1,21 +1,172 @@
 <!doctype html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tadbir: expense tracker and budget app in Arabic | Tadbir Labs</title>
-<meta name="description" content="Tadbir is an expense tracker and budget app designed for Arabic speakers. Track spending, debts and savings goals. The core features work offline, with no sign-up and no ads.">
+<title>Tadbir: expense tracker and budget app | Tadbir Labs</title>
+<meta name="description" content="Tadbir is an expense tracker and budget app for your spending, budgets, debts and savings goals. The core features work offline, with no sign-up and no ads.">
 <meta name="theme-color" content="#001847">
 <link rel="icon" href="/assets/img/tadbir-icon.png">
 <link rel="preload" href="/assets/fonts/jost-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/home.css">
-<meta property="og:title" content="Tadbir: expense tracker and budget app in Arabic">
-<meta property="og:description" content="An expense tracker and budget app designed for Arabic speakers. The core features work offline, with no sign-up and no ads.">
+<meta property="og:title" content="Tadbir: expense tracker and budget app">
+<meta property="og:description" content="An expense tracker and budget app for your spending, budgets, debts and savings goals. The core features work offline, with no sign-up and no ads.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tadbirlabs.net/">
-<meta property="og:image" content="https://tadbirlabs.net/assets/img/tadbir-icon.png">
+<meta property="og:image" content="https://tadbirlabs.net/assets/img/og/tadbir-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tadbir on a phone: total balance, income and spending for the month, and a list of debts">
+<meta property="og:site_name" content="Tadbir Labs">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="ar">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://tadbirlabs.net/">
 <link rel="alternate" hreflang="ar" href="https://tadbirlabs.net/ar/">
 <link rel="alternate" hreflang="en" href="https://tadbirlabs.net/">
 <link rel="alternate" hreflang="x-default" href="https://tadbirlabs.net/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://tadbirlabs.net/#organization",
+   "name": "Tadbir Labs",
+   "url": "https://tadbirlabs.net/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://tadbirlabs.net/assets/img/tadbir-icon.png",
+    "width": 384,
+    "height": 384
+   },
+   "email": "support@tadbirlabs.net",
+   "sameAs": [
+    "https://t.me/tadbirlabs"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://tadbirlabs.net/#website",
+   "name": "Tadbir Labs",
+   "url": "https://tadbirlabs.net/",
+   "inLanguage": [
+    "en",
+    "ar"
+   ],
+   "publisher": {
+    "@id": "https://tadbirlabs.net/#organization"
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://tadbirlabs.net/#app",
+   "name": "Tadbir",
+   "alternateName": "تدبير",
+   "description": "Tadbir is a personal finance app for iPhone and Android: spending and income, budgets, debts and savings goals in one place. The core features work offline, with no sign-up and no ads.",
+   "url": "https://tadbirlabs.net/",
+   "applicationCategory": "FinanceApplication",
+   "operatingSystem": "Android, iOS",
+   "inLanguage": [
+    "ar",
+    "en"
+   ],
+   "image": "https://tadbirlabs.net/assets/img/tadbir-icon.png",
+   "screenshot": [
+    "https://tadbirlabs.net/assets/img/screens/dashboard.webp",
+    "https://tadbirlabs.net/assets/img/screens/budgets.webp",
+    "https://tadbirlabs.net/assets/img/screens/debts.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download. The essentials are free; Premium is an optional subscription."
+   },
+   "installUrl": "https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir",
+   "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir",
+    "https://apps.apple.com/app/id6756894036"
+   ],
+   "author": {
+    "@id": "https://tadbirlabs.net/#organization"
+   },
+   "publisher": {
+    "@id": "https://tadbirlabs.net/#organization"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://tadbirlabs.net/#faq",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Tadbir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tadbir is a personal finance app made by Tadbir Labs. You record your spending and income, set budgets, track debts and save toward goals, all in one place. The core features work without internet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Tadbir free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The essentials are free: as many transactions as you like, 2 accounts, 1 budget, 1 savings goal, 1 active debt and 3 repeating transactions, with backup, restore and export. Premium, monthly or yearly, lifts these limits and adds receipt photos, App Lock and CSV import. New subscribers can try Premium free for 7 days when the store offers the trial; the app shows the offer and the price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Tadbir work without internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The core features work offline: recording transactions, budgets, debts, goals and charts. Purchases need a connection, and files you export or share go wherever you send them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Tadbir read my bank messages?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Tadbir does not ask for access to your messages or to notifications from banking apps, and it does not connect to your bank account. You enter your transactions yourself. Purchases are handled by Apple or Google, and by RevenueCat, as the privacy policy explains."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to create an account?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. There is no sign-up and there are no ads. Open the app and start."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Tadbir available on iPhone and Android?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. It is free to download from the App Store and Google Play. Each store page shows which system versions it supports."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which currency does Tadbir use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The one you choose. You can also keep accounts in different currencies, with exchange rates you set."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I move my data to a new phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On the old phone, export a full backup file from the app and save it where the new phone can open it. On the new phone, install Tadbir and restore that file; restoring replaces the Tadbir data already on that phone. Backup files contain your financial data and are not encrypted, so keep them private. The exact steps are on the support page."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -36,7 +187,7 @@
       <div class="hero-text">
         <p class="kicker"><span lang="ar" dir="rtl">تدبير</span><span>Tadbir</span></p>
         <h1>Your spending, budgets and debts in one place.</h1>
-        <p class="lede">An expense tracker and budget app designed for Arabic speakers. It works offline, and your records are stored on your phone.</p>
+        <p class="lede">An expense tracker and budget app. The core features work offline, and your records are stored on your phone.</p>
         <div class="badges">
           <a href="https://apps.apple.com/app/id6756894036"><img src="/assets/img/badges/app-store-en.svg" alt="Download on the App Store" width="156" height="52"></a>
           <a href="https://play.google.com/store/apps/details?id=com.tadbirlabs.tadbir&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dweb"><img class="play" src="/assets/img/badges/google-play-en.png" alt="Get it on Google Play" width="199" height="77"></a>
@@ -61,16 +212,16 @@
     </div>
     <div class="promises">
       <div class="promise">
-        <h3>Arabic from the start</h3>
-        <p>Designed right to left, with Arabic wording written for the app. English is included too.</p>
-      </div>
-      <div class="promise">
         <h3>Works without internet</h3>
         <p>Record, budget and review anywhere. The core features need no connection.</p>
       </div>
       <div class="promise">
         <h3>No sign-up, no ads</h3>
         <p>Open the app and start. There is no account to create and nothing to watch.</p>
+      </div>
+      <div class="promise">
+        <h3>Arabic and English</h3>
+        <p>Designed right to left for Arabic, with wording written for the app, and complete in English.</p>
       </div>
     </div>
   </div>
@@ -212,6 +363,49 @@
         </ul>
         <p class="note">New subscribers can try Premium free for 7 days when the store offers the trial. The app shows the offer and the price, and you can cancel in your App Store or Google Play account.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Common questions about Tadbir</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What is Tadbir?</summary>
+        <p>Tadbir is a personal finance app made by Tadbir Labs. You record your spending and income, set budgets, track debts and save toward goals, all in one place. The core features work without internet.</p>
+      </details>
+      <details>
+        <summary>Is Tadbir free?</summary>
+        <p>The essentials are free: as many transactions as you like, 2 accounts, 1 budget, 1 savings goal, 1 active debt and 3 repeating transactions, with backup, restore and export. Premium, monthly or yearly, lifts these limits and adds receipt photos, App Lock and CSV import. New subscribers can try Premium free for 7 days when the store offers the trial; the app shows the offer and the price.</p>
+      </details>
+      <details>
+        <summary>Does Tadbir work without internet?</summary>
+        <p>Yes. The core features work offline: recording transactions, budgets, debts, goals and charts. Purchases need a connection, and files you export or share go wherever you send them.</p>
+      </details>
+      <details>
+        <summary>Does Tadbir read my bank messages?</summary>
+        <p>No. Tadbir does not ask for access to your messages or to notifications from banking apps, and it does not connect to your bank account. You enter your transactions yourself. Purchases are handled by Apple or Google, and by RevenueCat, as the <a href="/privacy/">privacy policy</a> explains.</p>
+      </details>
+      <details>
+        <summary>Do I need to create an account?</summary>
+        <p>No. There is no sign-up and there are no ads. Open the app and start.</p>
+      </details>
+      <details>
+        <summary>Is Tadbir available on iPhone and Android?</summary>
+        <p>Yes. It is free to download from the App Store and Google Play. Each store page shows which system versions it supports.</p>
+      </details>
+      <details>
+        <summary>Which currency does Tadbir use?</summary>
+        <p>The one you choose. You can also keep accounts in different currencies, with exchange rates you set.</p>
+      </details>
+      <details>
+        <summary>How do I move my data to a new phone?</summary>
+        <p>On the old phone, export a full backup file from the app and save it where the new phone can open it. On the new phone, install Tadbir and restore that file; restoring replaces the Tadbir data already on that phone. Backup files contain your financial data and are not encrypted, so keep them private. The exact steps are on the <a href="/support/">support page</a>.</p>
+      </details>
     </div>
   </div>
 </section>
