@@ -109,7 +109,7 @@ details.version-history ul { margin: 12px 0 2px; }
 .badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 8px 0 26px; }
 .badges a { display: inline-flex; border-radius: 10px; }
 .badges img { height: 52px; width: auto; display: block; }
-.badges img.play { height: 77px; margin: -12px -11px; }
+.badges img.play { height: 77px; max-width: none; margin: -12px -11px; }
 
 /* Footer */
 .foot { background: var(--navy); color: var(--on-navy-muted); padding-block: 44px; font-size: .98rem; line-height: 1.6; }
